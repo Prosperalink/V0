@@ -204,7 +204,7 @@ export default function ContactInfoNexus() {
                 className="w-full h-auto object-cover"
               />
               {/* Overlay with cinematic glow */}
-              <div className="absolute inset-0 bg-gradient-to-t from-deep-blue/20 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-deep-blue/20 via-transparent to-transparent" />
 
               {/* Location marker */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -226,8 +226,8 @@ export default function ContactInfoNexus() {
             </div>
 
             {/* Background decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-golden-accent/10 rounded-full blur-xl"></div>
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-golden-accent/5 rounded-full blur-xl"></div>
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-golden-accent/10 rounded-full blur-xl" />
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-golden-accent/5 rounded-full blur-xl" />
           </motion.div>
         </div>
 

@@ -25,6 +25,7 @@
     "motion-utils": "^12.23.2",
     "nanoid": "^5.1.5",
     "next": "^15.4.1",
+    "pexels": "^1.4.0",
     "postcss": "^8.4.38",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

@@ -1,123 +1,95 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Linkedin, Twitter } from 'lucide-react';
 import Image from 'next/image';
 
 const teamMembers = [
   {
-    id: 'oussama-naffati',
     name: 'Oussama Naffati',
-    role: 'Founder & Creative Director',
+    role: 'The Cosmic Director',
+    title: 'Visionary Architect & Founder',
+    expertise: 'Universal Storytelling, Dimensional Design, Galactic Strategy',
     philosophy:
-      'Every pixel tells a story, every interaction creates a universe.',
-    image: '/assets/about/team/oussama-naffati.jpg',
-    linkedin: 'https://linkedin.com/in/oussama-naffati',
-    twitter: 'https://twitter.com/oussama_naffati',
+      'Every project is a new dimension waiting to be explored. My mission is to guide its creation with cosmic precision.',
+    image:
+      'https://placehold.co/400x400/16213E/F0F0F0?text=Oussama+Naffati+Cosmic',
   },
   {
-    id: 'sarah-chen',
-    name: 'Sarah Chen',
-    role: 'Lead Digital Architect',
+    name: 'Sarah Johnson',
+    role: 'The Celestial Cinematographer',
+    title: 'Creative Director & Visual Architect',
+    expertise: 'Cinematic Storytelling, Visual Design, Brand Evolution',
     philosophy:
-      'Weaving technology and creativity into seamless digital experiences.',
-    image: '/assets/about/team/sarah-chen.jpg',
-    linkedin: 'https://linkedin.com/in/sarah-chen',
-    twitter: 'https://twitter.com/sarah_chen',
+      'I craft visual narratives that transcend the ordinary and transport audiences to new dimensions of possibility.',
+    image:
+      'https://placehold.co/400x400/1A1A2E/FFED4E?text=Sarah+Johnson+Cosmic',
   },
   {
-    id: 'michael-rodriguez',
-    name: 'Michael Rodriguez',
-    role: 'Cinematic Solutions Director',
-    philosophy: 'Transforming visions into cinematic digital realities.',
-    image: '/assets/about/team/michael-rodriguez.jpg',
-    linkedin: 'https://linkedin.com/in/michael-rodriguez',
-    twitter: 'https://twitter.com/michael_rodriguez',
+    name: 'Michael Chen',
+    role: 'The Interstellar Engineer',
+    title: 'Technical Director & Digital Architect',
+    expertise:
+      'Digital Infrastructure, Cosmic Technology, Performance Optimization',
+    philosophy:
+      'I build the digital foundations that power our cinematic universes with precision and scalability.',
+    image:
+      'https://placehold.co/400x400/0F3460/B0B0B0?text=Michael+Chen+Cosmic',
   },
   {
-    id: 'emily-watson',
-    name: 'Emily Watson',
-    role: 'UX Universe Designer',
-    philosophy: 'Creating intuitive journeys through digital dimensions.',
-    image: '/assets/about/team/emily-watson.jpg',
-    linkedin: 'https://linkedin.com/in/emily-watson',
-    twitter: 'https://twitter.com/emily_watson',
-  },
-  {
-    id: 'david-kim',
-    name: 'David Kim',
-    role: 'Technical Cosmos Engineer',
-    philosophy: 'Building the foundations of digital universes with precision.',
-    image: '/assets/about/team/david-kim.jpg',
-    linkedin: 'https://linkedin.com/in/david-kim',
-    twitter: 'https://twitter.com/david_kim',
-  },
-  {
-    id: 'lisa-patel',
-    name: 'Lisa Patel',
-    role: 'Content Universe Curator',
-    philosophy: 'Crafting narratives that resonate across digital dimensions.',
-    image: '/assets/about/team/lisa-patel.jpg',
-    linkedin: 'https://linkedin.com/in/lisa-patel',
-    twitter: 'https://twitter.com/lisa_patel',
+    name: 'Emily Rodriguez',
+    role: 'The Galactic Strategist',
+    title: 'Strategic Director & Market Navigator',
+    expertise: 'Market Analysis, Strategic Planning, Cosmic Positioning',
+    philosophy:
+      'I chart the course for brands to navigate the digital cosmos and achieve stellar market presence.',
+    image:
+      'https://placehold.co/400x400/1C1C1C/D4AF37?text=Emily+Rodriguez+Cosmic',
   },
 ];
 
 export default function AboutTeamCrew() {
   return (
-    <section className="py-20 bg-gradient-to-br from-dark-tone via-deep-blue to-dark-tone">
-      <div className="container mx-auto px-6">
+    <section className="py-20 bg-gradient-to-br from-deep-blue via-dark-tone to-deep-blue overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-deep-blue/50 via-dark-tone/30 to-deep-blue/50" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-golden-glow rounded-full blur-3xl opacity-20" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-golden-glow rounded-full blur-3xl opacity-20" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-cinematic font-bold mb-6 text-golden-accent"
-          >
-            Meet Our Cosmic Crew
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-xl text-text-white max-w-3xl mx-auto"
-          >
-            The visionary minds behind every digital universe we create. Each
-            member brings unique expertise and passion to our cinematic mission.
-          </motion.p>
-
-          {/* Golden Accent Line */}
-          <motion.div
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            transition={{ duration: 1.2, delay: 0.6 }}
-            viewport={{ once: true }}
-            className="w-32 h-1 bg-gradient-to-r from-golden-accent to-yellow-400 mx-auto mt-8"
-          />
+          <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-6 font-cinematic">
+            Meet the Crew
+          </h2>
+          <p className="text-xl text-text-secondary max-w-3xl mx-auto">
+            A universe is only as magnificent as its architects. Meet the
+            'Cosmic Team' – a collective of visionary directors, celestial
+            cinematographers, and interstellar engineers, each a master of their
+            craft, converging at our Tunisian nexus to build your digital
+            destiny.
+          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Team Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
             <motion.div
-              key={member.id}
-              initial={{ opacity: 0, y: 50 }}
+              key={member.name}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="relative group"
+              className="group relative"
             >
-              <div className="bg-gradient-to-br from-dark-tone/50 to-mid-tone/50 p-8 rounded-2xl backdrop-blur-sm border border-golden-accent/20 shadow-xl hover:shadow-2xl transition-all duration-500 group-hover:border-golden-accent/40">
+              <div className="relative bg-gradient-to-br from-dark-tone to-mid-tone rounded-2xl p-6 border border-border-card hover:border-golden-accent transition-all duration-500 shadow-xl hover:shadow-2xl">
                 {/* Image */}
-                <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-golden-accent/30">
+                <div className="relative h-64 rounded-xl overflow-hidden mb-6">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -125,46 +97,26 @@ export default function AboutTeamCrew() {
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-deep-blue/20 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-deep-blue/40 via-transparent to-transparent" />
                 </div>
 
-                {/* Name */}
-                <h3 className="text-2xl font-cinematic font-bold text-golden-accent mb-2 text-center group-hover:text-golden-subtle transition-colors duration-300">
-                  {member.name}
-                </h3>
-
-                {/* Role */}
-                <p className="text-text-white text-center mb-4 font-medium">
-                  {member.role}
-                </p>
-
-                {/* Philosophy */}
-                <p className="text-text-subtle text-center italic mb-6 leading-relaxed">
-                  "{member.philosophy}"
-                </p>
-
-                {/* Social Links */}
-                <div className="flex justify-center gap-4">
-                  <motion.a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="w-10 h-10 bg-golden-accent/20 rounded-full flex items-center justify-center hover:bg-golden-accent/30 transition-colors duration-300"
-                  >
-                    <Linkedin className="w-5 h-5 text-golden-accent" />
-                  </motion.a>
-                  <motion.a
-                    href={member.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="w-10 h-10 bg-golden-accent/20 rounded-full flex items-center justify-center hover:bg-golden-accent/30 transition-colors duration-300"
-                  >
-                    <Twitter className="w-5 h-5 text-golden-accent" />
-                  </motion.a>
+                {/* Content */}
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-golden-accent mb-2 font-cinematic">
+                    {member.role}
+                  </h3>
+                  <h4 className="text-lg font-semibold text-text-white mb-1">
+                    {member.name}
+                  </h4>
+                  <p className="text-sm text-golden-accent mb-4">
+                    {member.title}
+                  </p>
+                  <p className="text-xs text-text-subtle mb-4 leading-relaxed">
+                    <strong>Expertise:</strong> {member.expertise}
+                  </p>
+                  <p className="text-sm text-text-secondary italic leading-relaxed">
+                    "{member.philosophy}"
+                  </p>
                 </div>
 
                 {/* Floating elements */}
@@ -184,39 +136,62 @@ export default function AboutTeamCrew() {
               </div>
 
               {/* Background glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-golden-accent/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-golden-accent/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
           ))}
         </div>
 
-        {/* Additional cosmic elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <motion.div
-            animate={{
-              y: [0, -20, 0],
-              opacity: [0.3, 0.6, 0.3],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-            className="absolute top-20 left-10 w-2 h-2 bg-golden-accent rounded-full"
-          />
-          <motion.div
-            animate={{
-              y: [0, 30, 0],
-              opacity: [0.2, 0.5, 0.2],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: 2,
-            }}
-            className="absolute top-40 right-20 w-1 h-1 bg-golden-accent rounded-full"
-          />
-        </div>
+        {/* Philosophy Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-20 text-center"
+        >
+          <h3 className="text-3xl font-bold text-golden-accent mb-8 font-cinematic">
+            Our Philosophy: Cinematic Solutions
+          </h3>
+          <p className="text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed mb-8">
+            Our philosophy is the gravitational law of our universe: 'Cinematic
+            Solutions.' It's the force that shapes every dimension we create,
+            ensuring unparalleled depth, narrative power, and stellar
+            performance. We are driven by:
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <h4 className="text-lg font-bold text-golden-accent mb-4">
+                Cosmic Precision
+              </h4>
+              <p className="text-text-subtle">
+                Engineering every detail for flawless inter-dimensional harmony.
+              </p>
+            </div>
+            <div className="text-center">
+              <h4 className="text-lg font-bold text-golden-accent mb-4">
+                Dimensional Storytelling
+              </h4>
+              <p className="text-text-subtle">
+                Crafting narratives that resonate across all cosmic frequencies.
+              </p>
+            </div>
+            <div className="text-center">
+              <h4 className="text-lg font-bold text-golden-accent mb-4">
+                Universal Production Excellence
+              </h4>
+              <p className="text-text-subtle">
+                Delivering stellar quality that propels brands into their own
+                digital galaxies.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Background decorative elements */}
+        <div className="absolute top-20 left-10 w-2 h-2 bg-golden-accent rounded-full opacity-40 animate-pulse" />
+        <div className="absolute top-40 right-20 w-1 h-1 bg-golden-accent rounded-full opacity-30 animate-pulse" />
+        <div className="absolute bottom-20 left-1/3 w-1.5 h-1.5 bg-golden-accent rounded-full opacity-50 animate-pulse" />
       </div>
     </section>
   );

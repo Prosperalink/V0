@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Sparkles, Target, Zap } from 'lucide-react';
 import Image from 'next/image';
 
 const pillars = [
@@ -9,102 +8,67 @@ const pillars = [
     id: 'cosmic-precision',
     title: 'Cosmic Precision',
     description:
-      'Every detail meticulously crafted, every pixel perfectly placed. We achieve cosmic precision through rigorous attention to detail and unwavering commitment to excellence.',
-    icon: Target,
-    image: '/assets/homepage/pillars/cosmic-precision.jpg',
+      'Every digital element is meticulously calibrated, from the subtle gravitational pull of a button interaction to the dramatic cosmic reveal of a hero section. We engineer experiences with the precision required to navigate the vastness of the digital cosmos.',
+    image: '/assets/homepage/matrix/matrix-background.jpg',
   },
   {
     id: 'dimensional-storytelling',
     title: 'Dimensional Storytelling',
     description:
-      'We weave narratives that transcend the ordinary, creating immersive experiences that transport users to new dimensions of possibility and wonder.',
-    icon: Sparkles,
-    image: '/assets/homepage/pillars/dimensional-storytelling.jpg',
+      "We believe that great digital products, like great cinematic sagas, are built on compelling narratives. We delve into your brand's cosmic DNA to unearth stories that resonate across dimensions, weaving them into the user journey to forge genuine inter-dimensional connections.",
+    image: '/assets/homepage/pillars/pillars-background.jpg',
   },
   {
     id: 'universal-production',
     title: 'Universal Production Excellence',
     description:
-      'From concept to completion, we maintain the highest standards of production quality, ensuring every project meets Hollywood-level excellence.',
-    icon: Zap,
-    image: '/assets/homepage/pillars/universal-production.jpg',
+      'From the initial cosmic concept to the final galactic premiere, we deliver an unparalleled level of polish. Our process leverages cutting-edge technology and cosmic talent to produce stunning visuals and seamless digital experiences, maintaining the same stellar standards as major cinematic productions.',
+    image:
+      'https://placehold.co/800x600/16213E/B0B0B0?text=Universal+Production',
   },
 ];
 
 export default function PillarsCosmicCreation() {
   return (
-    <section className="py-20 bg-gradient-to-br from-deep-blue via-dark-tone to-deep-blue">
-      <div className="container mx-auto px-6">
+    <section className="py-20 bg-gradient-to-br from-deep-blue via-dark-tone to-deep-blue overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-deep-blue/30 via-dark-tone/20 to-deep-blue/30 pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-golden-glow rounded-full blur-3xl opacity-10 pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-golden-glow rounded-full blur-3xl opacity-10 pointer-events-none" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-cinematic font-bold mb-6 text-golden-accent"
-          >
+          <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-6 font-cinematic">
             The Pillars of Cosmic Creation
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-xl text-text-white max-w-3xl mx-auto"
-          >
-            Three foundational principles that guide our journey through the
-            digital cosmos.
-          </motion.p>
-
-          {/* Golden Accent Line */}
-          <motion.div
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            transition={{ duration: 1.2, delay: 0.6 }}
-            viewport={{ once: true }}
-            className="w-32 h-1 bg-gradient-to-r from-golden-accent to-yellow-400 mx-auto mt-8"
-          />
+          </h2>
+          <p className="text-xl text-text-secondary max-w-3xl mx-auto">
+            Our universe is built upon three fundamental forces – the 'Pillars
+            of Cosmic Creation' – ensuring every project achieves stellar
+            magnitude.
+          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Pillars Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {pillars.map((pillar, index) => (
             <motion.div
               key={pillar.id}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className="relative group"
+              className="group relative"
             >
-              <div className="bg-gradient-to-br from-dark-tone/50 to-mid-tone/50 p-8 rounded-2xl backdrop-blur-sm border border-golden-accent/20 shadow-xl hover:shadow-2xl transition-all duration-500 group-hover:border-golden-accent/40">
-                {/* Icon */}
-                <motion.div
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ duration: 0.3 }}
-                  className="w-16 h-16 bg-golden-accent/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-golden-accent/30 transition-colors duration-300"
-                >
-                  <pillar.icon className="w-8 h-8 text-golden-accent" />
-                </motion.div>
-
-                {/* Title */}
-                <h3 className="text-2xl font-cinematic font-bold text-golden-accent mb-4 group-hover:text-golden-subtle transition-colors duration-300">
-                  {pillar.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-text-white leading-relaxed mb-6">
-                  {pillar.description}
-                </p>
-
+              <div className="relative bg-gradient-to-br from-dark-tone to-mid-tone rounded-2xl p-6 border border-border-card hover:border-golden-accent transition-all duration-500 shadow-xl hover:shadow-2xl">
                 {/* Image */}
-                <div className="relative h-48 rounded-xl overflow-hidden">
+                <div className="relative h-48 rounded-xl overflow-hidden mb-6">
                   <Image
                     src={pillar.image}
                     alt={pillar.title}
@@ -114,6 +78,14 @@ export default function PillarsCosmicCreation() {
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-deep-blue/40 via-transparent to-transparent" />
                 </div>
+
+                {/* Content */}
+                <h3 className="text-2xl font-bold text-golden-accent mb-4 font-cinematic">
+                  {pillar.title}
+                </h3>
+                <p className="text-text-secondary leading-relaxed">
+                  {pillar.description}
+                </p>
 
                 {/* Floating elements */}
                 <motion.div
@@ -132,39 +104,15 @@ export default function PillarsCosmicCreation() {
               </div>
 
               {/* Background glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-golden-accent/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-r from-golden-accent/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             </motion.div>
           ))}
         </div>
 
         {/* Additional cosmic elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <motion.div
-            animate={{
-              y: [0, -20, 0],
-              opacity: [0.3, 0.6, 0.3],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-            className="absolute top-20 left-10 w-2 h-2 bg-golden-accent rounded-full"
-          />
-          <motion.div
-            animate={{
-              y: [0, 30, 0],
-              opacity: [0.2, 0.5, 0.2],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: 2,
-            }}
-            className="absolute top-40 right-20 w-1 h-1 bg-golden-accent rounded-full"
-          />
-        </div>
+        <div className="absolute top-20 left-10 w-2 h-2 bg-golden-accent rounded-full opacity-40 animate-pulse pointer-events-none" />
+        <div className="absolute top-40 right-20 w-1 h-1 bg-golden-accent rounded-full opacity-30 animate-pulse pointer-events-none" />
+        <div className="absolute bottom-20 left-1/3 w-1.5 h-1.5 bg-golden-accent rounded-full opacity-50 animate-pulse pointer-events-none" />
       </div>
     </section>
   );

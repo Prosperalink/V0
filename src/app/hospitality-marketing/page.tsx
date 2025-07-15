@@ -25,7 +25,9 @@ export default function HospitalityMarketingPage() {
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             Showcase Your
             <br />
-            <span className="text-orange-600">Hospitality Excellence</span>
+            <span className="text-orange-600 golden-text-high-contrast">
+              Hospitality Excellence
+            </span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-700">
             From hotel marketing videos to restaurant photography, we create

@@ -6,14 +6,14 @@ import Image from 'next/image';
 export default function AboutHeroGenesis() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-deep-blue/95 via-deep-blue/80 to-deep-blue/95 z-10"></div>
+      {/* Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-deep-blue/95 via-dark-tone/80 to-deep-blue/95 z-10" />
         <Image
-          src="/assets/about/hero/cosmic-genesis.jpg"
-          alt="Our Cosmic Genesis"
+          src="https://placehold.co/1920x600/0A0A0F/FFED4E?text=Cosmic+Genesis"
+          alt="Cosmic Genesis"
           fill
-          className="object-cover opacity-80"
+          className="object-cover opacity-60"
           priority
         />
       </div>
@@ -34,7 +34,7 @@ export default function AboutHeroGenesis() {
             className="inline-flex items-center px-6 py-3 rounded-full bg-golden-accent/20 backdrop-blur-sm border border-golden-accent/30 shadow-lg"
           >
             <span className="text-sm font-semibold tracking-wide">
-              Our Story Begins
+              Our Cosmic Genesis
             </span>
           </motion.div>
 
@@ -59,10 +59,12 @@ export default function AboutHeroGenesis() {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="text-xl sm:text-2xl lg:text-3xl text-text-white mb-8 max-w-4xl mx-auto leading-relaxed"
           >
-            From a singular vision, a universe unfolded. Born from the visionary
-            spirit of Oussama Naffati, and inspired by the boundless creativity
-            of Orson Welles, our universe began its genesis in the heart of
-            Tunisia.
+            From a singular vision, a universe unfolded. Orson Vision was
+            conceived by Oussama Naffati, a cinema director with a profound
+            understanding of narrative and visual impact. Inspired by the
+            pioneering spirit of Orson Welles, our journey began as a quest to
+            infuse the digital realm with cinematic grandeur, rooted deeply in
+            the vibrant landscape of Tunisia.
           </motion.p>
 
           {/* Golden Accent Line */}
@@ -82,21 +84,23 @@ export default function AboutHeroGenesis() {
           >
             <div className="text-center">
               <div className="text-3xl font-bold text-golden-accent mb-2">
-                2008
+                15+
               </div>
-              <div className="text-text-subtle">Year of Genesis</div>
+              <div className="text-text-subtle">
+                Years of Cinematic Excellence
+              </div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-golden-accent mb-2">
-                Tunisia
+                500+
               </div>
-              <div className="text-text-subtle">Birthplace</div>
+              <div className="text-text-subtle">Digital Universes Created</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-golden-accent mb-2">
-                Infinite
+                98%
               </div>
-              <div className="text-text-subtle">Possibilities Created</div>
+              <div className="text-text-subtle">Client Satisfaction</div>
             </div>
           </motion.div>
         </motion.div>

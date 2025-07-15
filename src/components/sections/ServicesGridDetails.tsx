@@ -227,7 +227,7 @@ export default function ServicesGridDetails() {
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-deep-blue/40 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-deep-blue/40 via-transparent to-transparent" />
                 </div>
 
                 {/* Sub-services */}
@@ -241,7 +241,7 @@ export default function ServicesGridDetails() {
                         key={subIndex}
                         className="text-text-subtle text-sm flex items-center gap-2"
                       >
-                        <div className="w-1.5 h-1.5 bg-golden-accent rounded-full"></div>
+                        <div className="w-1.5 h-1.5 bg-golden-accent rounded-full" />
                         {subService}
                       </li>
                     ))}
@@ -275,7 +275,7 @@ export default function ServicesGridDetails() {
               </div>
 
               {/* Background glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-golden-accent/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-golden-accent/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
           ))}
         </div>

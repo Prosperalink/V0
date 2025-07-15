@@ -275,7 +275,7 @@ export default function PortfolioProjectsGallery() {
               </div>
 
               {/* Background glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-golden-accent/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-golden-accent/5 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
           ))}
         </div>

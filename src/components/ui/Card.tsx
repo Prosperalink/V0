@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 interface CardProps {
   image?: string;
@@ -50,7 +50,7 @@ const Card: React.FC<CardProps> = ({
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[var(--deep-blue)] via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[var(--deep-blue)] via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300 pointer-events-none" />
         </div>
       )}
 

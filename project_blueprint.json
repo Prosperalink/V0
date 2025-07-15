@@ -1,0 +1,384 @@
+{
+  "prompt_metadata": {
+    "target_ai": "Stich AI",
+    "generation_goal": "To serve as the foundational data for a full creative redesign.",
+    "generated_by": "Cursor AI Full-Site Audit",
+    "timestamp": "2025-07-15T12:00:00.000Z"
+  },
+  "project_identity": {
+    "name": "Orson Vision",
+    "philosophy": "The brand's core philosophy is 'Cinematic Solutions.' It merges the grandeur of cinema with the precision of digital product development. The narrative is inspired by Orson Welles and originates from the Tunisian market.",
+    "core_keywords": [
+      "Cinematic",
+      "Immersive",
+      "Futuristic",
+      "Premium",
+      "Sophisticated",
+      "Celestial",
+      "Epic"
+    ]
+  },
+  "design_system_audit": {
+    "mood_board": "Sophisticated, mysterious, futuristic, premium, dark-mode first. Think 'Interstellar' meets 'Blade Runner 2049' UI design.",
+    "color_palette": {
+      "primary_backgrounds": [
+        "#0a0a0f",
+        "#1a1a2e",
+        "#16213e",
+        "#0f3460",
+        "#0d1117",
+        "#02040a"
+      ],
+      "primary_accents": ["#ffd700", "#ffed4e", "#b8860b"],
+      "secondary_accents": ["#d4af37", "#ffed4e", "rgba(255, 215, 0, 0.1)"]
+    },
+    "typography": {
+      "headline_font_family": "Cinzel, serif",
+      "body_font_family": "Montserrat, sans-serif"
+    },
+    "visual_motifs": {
+      "identified_in_code": [
+        "glow",
+        "holographic",
+        "constellation",
+        "portal",
+        "cosmic",
+        "nebula",
+        "stellar",
+        "galactic",
+        "cinematic",
+        "universe",
+        "dimension",
+        "cosmic-precision",
+        "dimensional-storytelling",
+        "universal-production",
+        "cosmic-blueprint",
+        "stellar-portfolio",
+        "cosmic-genesis",
+        "nebula-formation",
+        "cosmic-portal",
+        "galaxy-cityscape",
+        "cosmic-team",
+        "cosmic-solutions",
+        "cosmic-ecommerce",
+        "nebula-mobile-app",
+        "stellar-marketing",
+        "portal-website",
+        "cosmic-video",
+        "cosmic-universe",
+        "cosmic-journey",
+        "cosmic-vision",
+        "cosmic-excellence",
+        "cosmic-array",
+        "cosmic-atmosphere",
+        "cosmic-background",
+        "cosmic-border",
+        "cosmic-button",
+        "cosmic-card",
+        "cosmic-chronicle",
+        "cosmic-command",
+        "cosmic-communication",
+        "cosmic-consulting",
+        "cosmic-coordinates",
+        "cosmic-creation",
+        "cosmic-data",
+        "cosmic-design",
+        "cosmic-development",
+        "cosmic-dimensions",
+        "cosmic-directing",
+        "cosmic-display",
+        "cosmic-engineering",
+        "cosmic-entry",
+        "cosmic-evolution",
+        "cosmic-expertise",
+        "cosmic-filmmaking",
+        "cosmic-formation",
+        "cosmic-framework",
+        "cosmic-gateway",
+        "cosmic-genesis",
+        "cosmic-glow",
+        "cosmic-grid",
+        "cosmic-guide",
+        "cosmic-identity",
+        "cosmic-innovation",
+        "cosmic-interaction",
+        "cosmic-journey",
+        "cosmic-language",
+        "cosmic-layout",
+        "cosmic-lens",
+        "cosmic-light",
+        "cosmic-map",
+        "cosmic-masterpiece",
+        "cosmic-matrix",
+        "cosmic-message",
+        "cosmic-method",
+        "cosmic-motion",
+        "cosmic-narrative",
+        "cosmic-navigation",
+        "cosmic-nexus",
+        "cosmic-optimization",
+        "cosmic-origin",
+        "cosmic-palette",
+        "cosmic-panorama",
+        "cosmic-pattern",
+        "cosmic-perspective",
+        "cosmic-philosophy",
+        "cosmic-pixel",
+        "cosmic-platform",
+        "cosmic-portal",
+        "cosmic-precision",
+        "cosmic-production",
+        "cosmic-programming",
+        "cosmic-project",
+        "cosmic-prototype",
+        "cosmic-quality",
+        "cosmic-reality",
+        "cosmic-research",
+        "cosmic-resolution",
+        "cosmic-script",
+        "cosmic-service",
+        "cosmic-showcase",
+        "cosmic-solution",
+        "cosmic-space",
+        "cosmic-spectrum",
+        "cosmic-sphere",
+        "cosmic-spirit",
+        "cosmic-story",
+        "cosmic-strategy",
+        "cosmic-structure",
+        "cosmic-style",
+        "cosmic-system",
+        "cosmic-technique",
+        "cosmic-technology",
+        "cosmic-text",
+        "cosmic-theme",
+        "cosmic-timeline",
+        "cosmic-tone",
+        "cosmic-transformation",
+        "cosmic-transition",
+        "cosmic-universe",
+        "cosmic-vision",
+        "cosmic-voice",
+        "cosmic-voyage",
+        "cosmic-website",
+        "cosmic-workflow",
+        "cosmic-world"
+      ],
+      "iconography_style": "Cinematic, futuristic, space-themed icons with golden accents and glow effects"
+    }
+  },
+  "site_architecture_blueprint": {
+    "sitemap": [
+      "/",
+      "/about",
+      "/services",
+      "/portfolio",
+      "/process",
+      "/contact",
+      "/testimonials",
+      "/blog",
+      "/careers",
+      "/cinematic-universes",
+      "/client-journey",
+      "/creative-services",
+      "/digital-services",
+      "/educational-solutions",
+      "/fashion-retail",
+      "/hospitality-marketing",
+      "/business-growth",
+      "/wedding-solutions",
+      "/components-demo",
+      "/lens-gallery"
+    ],
+    "pages": [
+      {
+        "page_name": "Homepage",
+        "conceptual_role": "The Origin Dimension - The user's entry point into the cinematic universe",
+        "file_path": "src/app/page.tsx",
+        "component_list": [
+          "HeroPortalEntry",
+          "ManifestoCosmicGenesis",
+          "MatrixGalacticMap",
+          "PillarsCosmicCreation",
+          "PortfolioHighlights",
+          "TestimonialsSocialProof",
+          "FinalCTA"
+        ],
+        "component_details": [
+          {
+            "component_name": "HeroPortalEntry",
+            "key_text_content": "Directing Digital Universes, Your Vision Our Cosmos, Step through the portal. At Orson Vision, we architect immersive cinematic universes that captivate, inspire, and endure across dimensions, Enter the Cinematic Universe, Watch Our Story, 500+ Digital Universes Created, 98% Client Satisfaction, 15+ Years of Cinematic Excellence",
+            "asset_dependencies": [
+              "/assets/homepage/hero/cosmic-portal.mp4",
+              "/assets/homepage/hero/galaxy-cityscape.jpg"
+            ]
+          },
+          {
+            "component_name": "ManifestoCosmicGenesis",
+            "key_text_content": "The Cosmic Genesis, Every pixel is a star. Every interaction, a gravitational pull. Every project, a new dimension brought to life. Our philosophy, 'Cinematic Solutions,' is the fundamental force guiding the creation of digital experiences that rival the grandeur of cinematic epics, In the vast expanse of digital possibility, we craft universes where technology meets storytelling, where innovation dances with imagination, and where every solution becomes a portal to new dimensions of human experience",
+            "asset_dependencies": [
+              "/assets/homepage/manifesto/cosmic-blueprint.jpg"
+            ]
+          },
+          {
+            "component_name": "MatrixGalacticMap",
+            "key_text_content": "Navigate through our cosmic array of digital solutions, each a unique constellation of expertise designed to illuminate your path through the digital universe",
+            "asset_dependencies": []
+          },
+          {
+            "component_name": "PillarsCosmicCreation",
+            "key_text_content": "The Pillars of Cosmic Creation, Cosmic Precision - Every detail meticulously crafted, every pixel perfectly placed. We achieve cosmic precision through rigorous attention to detail and unwavering commitment to excellence, Dimensional Storytelling - We transform ordinary moments into extraordinary narratives through the art of cinematic storytelling, creating emotional connections that resonate deeply with audiences, Universal Production - Our production process combines cutting-edge technology with artistic vision to create digital experiences that rival the sophistication of Hollywood productions",
+            "asset_dependencies": [
+              "/assets/homepage/pillars/cosmic-precision.jpg",
+              "/assets/homepage/pillars/dimensional-storytelling.jpg",
+              "/assets/homepage/pillars/universal-production.jpg"
+            ]
+          },
+          {
+            "component_name": "PortfolioHighlights",
+            "key_text_content": "Explore Our Universes, A glimpse into the worlds we've directed. Each project represents a unique cinematic universe crafted with precision and storytelling mastery",
+            "asset_dependencies": [
+              "/assets/portfolio/cinematic-web-design.jpg",
+              "/assets/portfolio/digital-marketing.jpg",
+              "/assets/portfolio/mobile-app.jpg"
+            ]
+          },
+          {
+            "component_name": "TestimonialsSocialProof",
+            "key_text_content": "Transmissions From Our Partners, Hear from the visionaries who've entrusted us with their digital destinies",
+            "asset_dependencies": [
+              "/assets/testimonials/sarah-johnson.jpg",
+              "/assets/testimonials/michael-chen.jpg",
+              "/assets/testimonials/emily-rodriguez.jpg"
+            ]
+          },
+          {
+            "component_name": "FinalCTA",
+            "key_text_content": "Chart Your Digital Destiny, Ready to create your own cinematic universe? Let's craft something extraordinary together",
+            "asset_dependencies": []
+          }
+        ]
+      },
+      {
+        "page_name": "About",
+        "conceptual_role": "Our Cosmic Genesis - The origin story and team introduction",
+        "file_path": "src/app/about/page.tsx",
+        "component_list": ["AboutHeroGenesis", "AboutTeamCrew"],
+        "component_details": [
+          {
+            "component_name": "AboutHeroGenesis",
+            "key_text_content": "Our Cosmic Genesis, From a singular vision, a universe unfolded. Born from the visionary spirit of Oussama Naffati, and inspired by the boundless creativity of Orson Welles, our universe began its genesis in the heart of Tunisia",
+            "asset_dependencies": ["/assets/about/hero/cosmic-genesis.jpg"]
+          },
+          {
+            "component_name": "AboutTeamCrew",
+            "key_text_content": "Meet the Crew, Our cosmic team of visionaries, storytellers, and digital architects",
+            "asset_dependencies": []
+          }
+        ]
+      },
+      {
+        "page_name": "Services",
+        "conceptual_role": "Our Nebulas of Expertise - The comprehensive service offerings",
+        "file_path": "src/app/services/page.tsx",
+        "component_list": ["ServicesHeroNebulas", "ServicesGridDetails"],
+        "component_details": [
+          {
+            "component_name": "ServicesHeroNebulas",
+            "key_text_content": "Our Expertise Nebulas, Our Nebulas of Expertise, Explore our cosmic array of digital solutions, each a unique nebula of expertise designed to illuminate your path through the digital universe",
+            "asset_dependencies": [
+              "/assets/services/hero/nebula-formation.mp4",
+              "/assets/services/hero/nebula-formation.jpg"
+            ]
+          },
+          {
+            "component_name": "ServicesGridDetails",
+            "key_text_content": "Our Service Nebulas, Each service is a unique nebula of expertise, designed to illuminate your path through the digital universe, Digital Innovation - Pioneering new dimensions in technology, creating portals to future possibilities that transform how we interact with the digital cosmos, Creative Design - We craft visual experiences that tell compelling stories and create lasting emotional connections, Content Creation - From cinematic videos to compelling copy, we create content that resonates and inspires action, Strategic Consulting - We develop comprehensive strategies that align your digital presence with your business objectives, Technology Solutions - We build robust, scalable digital solutions that power your business growth",
+            "asset_dependencies": [
+              "/assets/services/digital_innovation/innovation-hub.jpg",
+              "/assets/services/creative_design/design-studio.jpg",
+              "/assets/services/content_creation/content-studio.jpg",
+              "/assets/services/technology_solutions/web-development.jpg",
+              "/assets/services/technology_solutions/mobile-apps.jpg",
+              "/assets/services/strategic_consulting/digital-marketing.jpg",
+              "/assets/services/strategic_consulting/consulting-room.jpg",
+              "/assets/services/content_creation/video-production.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "page_name": "Portfolio",
+        "conceptual_role": "Our Stellar Portfolio - Showcase of cinematic projects",
+        "file_path": "src/app/portfolio/page.tsx",
+        "component_list": [
+          "PortfolioHeroConstellation",
+          "PortfolioProjectsGallery"
+        ],
+        "component_details": [
+          {
+            "component_name": "PortfolioHeroConstellation",
+            "key_text_content": "Our Stellar Portfolio, A Constellation of Creations, Each project is a star in our constellation, illuminating the path to digital excellence and showcasing the boundless possibilities of cinematic solutions",
+            "asset_dependencies": ["/assets/portfolio/hero/star-cluster.jpg"]
+          },
+          {
+            "component_name": "PortfolioProjectsGallery",
+            "key_text_content": "Explore our constellation of successful projects, each showcasing the power of cinematic solutions, Cosmic E-commerce Platform, Nebula Mobile App, Stellar Marketing Campaign, Portal Website Design, Cosmic Video Production",
+            "asset_dependencies": [
+              "/assets/portfolio/cosmic-ecommerce.jpg",
+              "/assets/portfolio/cosmic-ecommerce.mp4",
+              "/assets/portfolio/nebula-mobile-app.jpg",
+              "/assets/portfolio/nebula-mobile-app.mp4",
+              "/assets/portfolio/stellar-marketing.jpg",
+              "/assets/portfolio/stellar-marketing.mp4",
+              "/assets/portfolio/portal-website.jpg",
+              "/assets/portfolio/portal-website.mp4",
+              "/assets/portfolio/cosmic-video.jpg",
+              "/assets/portfolio/cosmic-video.mp4"
+            ]
+          }
+        ]
+      },
+      {
+        "page_name": "Process",
+        "conceptual_role": "The Voyage Map - Our cinematic development process",
+        "file_path": "src/app/process/page.tsx",
+        "component_list": ["ProcessTimeline"],
+        "component_details": [
+          {
+            "component_name": "ProcessTimeline",
+            "key_text_content": "The Voyage Map, Discover our cinematic approach to digital project development. From discovery to launch, we guide you through every phase with precision and storytelling mastery",
+            "asset_dependencies": ["/assets/process/process-hero.jpg"]
+          }
+        ]
+      },
+      {
+        "page_name": "Contact",
+        "conceptual_role": "The Nexus Command Center - Contact and communication hub",
+        "file_path": "src/app/contact/page.tsx",
+        "component_list": [
+          "ContactHeroCommand",
+          "ContactFormCoordinates",
+          "ContactInfoNexus"
+        ],
+        "component_details": [
+          {
+            "component_name": "ContactHeroCommand",
+            "key_text_content": "The Nexus Command Center, Communication Portal, Ready to embark on your digital journey? Connect with our cosmic team and let's create something extraordinary together",
+            "asset_dependencies": ["/assets/contact/hero/nexus-command.jpg"]
+          },
+          {
+            "component_name": "ContactFormCoordinates",
+            "key_text_content": "Cosmic Identifier, Galactic Corporation, Cosmic Message, We'll respond within 24 hours to discuss your cosmic vision",
+            "asset_dependencies": []
+          },
+          {
+            "component_name": "ContactInfoNexus",
+            "key_text_content": "Connect with us through multiple channels and discover our cosmic approach to digital excellence, Follow Our Cosmic Journey, Cosmic Business Hours",
+            "asset_dependencies": []
+          }
+        ]
+      }
+    ]
+  }
+}

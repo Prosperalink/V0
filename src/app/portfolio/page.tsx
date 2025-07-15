@@ -1,30 +1,32 @@
-import PortfolioHeroConstellation from '@/components/sections/PortfolioHeroConstellation';
-import PortfolioProjectsGallery from '@/components/sections/PortfolioProjectsGallery';
+import PortfolioGalacticPremieres from '@/components/sections/PortfolioGalacticPremieres';
+import PortfolioHeroStellar from '@/components/sections/PortfolioHeroStellar';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Portfolio - Our Stellar Portfolio',
+  title: 'Portfolio - Our Stellar Portfolio: A Constellation of Creations',
   description:
-    'Each project is a star in our constellation, illuminating the path to digital excellence and showcasing the boundless possibilities of cinematic solutions.',
+    'Journey through our "Stellar Portfolio," a curated exhibition of digital masterpieces that shine brightly across the Cinematic Universe. Each project is a unique star system, a testament to our "Cinematic Solutions" philosophy, and a beacon of success launched from our Tunisian hub.',
   keywords: [
     'portfolio',
-    'web development',
-    'mobile apps',
-    'brand design',
-    'digital marketing',
-    'video production',
+    'stellar portfolio',
+    'galactic premieres',
+    'digital projects',
     'cinematic solutions',
-    'case studies',
+    'star systems',
+    'digital masterpieces',
+    'tunisia',
+    'cosmic projects',
+    'digital universe',
   ].join(', '),
   openGraph: {
-    title: 'Portfolio - Our Stellar Portfolio',
+    title: 'Portfolio - Our Stellar Portfolio: A Constellation of Creations',
     description:
-      'Each project is a star in our constellation, illuminating the path to digital excellence and showcasing the boundless possibilities of cinematic solutions.',
+      'Journey through our "Stellar Portfolio," a curated exhibition of digital masterpieces that shine brightly across the Cinematic Universe.',
     url: 'https://orsonvision.com/portfolio',
     siteName: 'Orson Vision',
     images: [
       {
-        url: '/assets/portfolio/hero/star-cluster.jpg',
+        url: 'https://placehold.co/1200x630/0A0A0F/E0E0E0?text=Star+Cluster+Portfolio',
         width: 1200,
         height: 630,
         alt: 'Our Stellar Portfolio - Orson Vision',
@@ -35,10 +37,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Portfolio - Our Stellar Portfolio',
+    title: 'Portfolio - Our Stellar Portfolio: A Constellation of Creations',
     description:
-      'Each project is a star in our constellation, illuminating the path to digital excellence and showcasing the boundless possibilities of cinematic solutions.',
-    images: ['/assets/portfolio/hero/star-cluster.jpg'],
+      'Journey through our "Stellar Portfolio," a curated exhibition of digital masterpieces that shine brightly across the Cinematic Universe.',
+    images: [
+      'https://placehold.co/1200x630/0A0A0F/E0E0E0?text=Star+Cluster+Portfolio',
+    ],
   },
   robots: {
     index: true,
@@ -64,11 +68,11 @@ export default function PortfolioPage() {
     <div className="relative min-h-screen bg-gradient-to-br from-deep-blue via-dark-tone to-deep-blue">
       {/* Main Content - Our Stellar Portfolio */}
       <main className="relative">
-        {/* Act I: The Constellation - Hero Section */}
-        <PortfolioHeroConstellation />
+        {/* Act I: The Stellar Portfolio - Hero Section */}
+        <PortfolioHeroStellar />
 
-        {/* Act II: The Gallery - Projects Section */}
-        <PortfolioProjectsGallery />
+        {/* Act II: The Galactic Premieres - Portfolio Section */}
+        <PortfolioGalacticPremieres />
       </main>
     </div>
   );

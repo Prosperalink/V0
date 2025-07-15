@@ -26,7 +26,9 @@ export default function FashionRetailPage() {
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             Elevate Your
             <br />
-            <span className="text-pink-600">Fashion Brand</span>
+            <span className="text-pink-600 golden-text-high-contrast">
+              Fashion Brand
+            </span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-700">
             From fashion photography to e-commerce solutions, we help fashion

@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function ManifestoCosmicGenesis() {
   return (
-    <section className="py-20 bg-gradient-to-r from-deep-blue via-dark-tone to-deep-blue">
+    <section className="py-20 bg-gradient-to-r from-deep-blue via-dark-tone to-deep-blue relative">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -36,7 +36,8 @@ export default function ManifestoCosmicGenesis() {
               Every project, a new dimension brought to life. Our philosophy,
               'Cinematic Solutions,' is the fundamental force guiding the
               creation of digital experiences that rival the grandeur of
-              cinematic epics.
+              cinematic epics. From our Tunisian nexus, we fuse artistic vision
+              with technical mastery to expand your brand's cosmic footprint.
             </motion.p>
 
             <motion.p
@@ -71,14 +72,14 @@ export default function ManifestoCosmicGenesis() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/assets/homepage/manifesto/cosmic-blueprint.jpg"
+                src="/assets/homepage/manifesto/manifesto-background.jpg"
                 alt="Cosmic Blueprint"
                 width={600}
                 height={400}
                 className="w-full h-auto object-cover"
               />
               {/* Overlay with cinematic glow */}
-              <div className="absolute inset-0 bg-gradient-to-t from-deep-blue/20 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-deep-blue/20 via-transparent to-transparent pointer-events-none" />
 
               {/* Floating elements */}
               <motion.div
@@ -91,7 +92,7 @@ export default function ManifestoCosmicGenesis() {
                   repeat: Infinity,
                   ease: 'easeInOut',
                 }}
-                className="absolute top-4 right-4 w-3 h-3 bg-golden-accent rounded-full shadow-lg"
+                className="absolute top-4 right-4 w-3 h-3 bg-golden-accent rounded-full shadow-lg pointer-events-none"
               />
               <motion.div
                 animate={{
@@ -104,13 +105,13 @@ export default function ManifestoCosmicGenesis() {
                   ease: 'easeInOut',
                   delay: 2,
                 }}
-                className="absolute bottom-6 left-6 w-2 h-2 bg-golden-accent rounded-full shadow-lg"
+                className="absolute bottom-6 left-6 w-2 h-2 bg-golden-accent rounded-full shadow-lg pointer-events-none"
               />
             </div>
 
             {/* Background decorative elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-golden-accent/10 rounded-full blur-xl" />
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-golden-accent/5 rounded-full blur-xl" />
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-golden-accent/10 rounded-full blur-xl pointer-events-none" />
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-golden-accent/5 rounded-full blur-xl pointer-events-none" />
           </motion.div>
         </div>
       </div>

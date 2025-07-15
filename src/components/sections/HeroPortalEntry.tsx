@@ -13,7 +13,7 @@ export default function HeroPortalEntry() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-deep-blue/95 via-deep-blue/80 to-deep-blue/95 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-deep-blue/90 via-deep-blue/70 to-deep-blue/90 z-10 pointer-events-none" />
         {!videoError ? (
           <video
             autoPlay
@@ -23,19 +23,19 @@ export default function HeroPortalEntry() {
             className={`w-full h-full object-cover transition-opacity duration-1000 ${
               videoLoaded ? 'opacity-100' : 'opacity-0'
             }`}
-            poster="/assets/homepage/hero/galaxy-cityscape.jpg"
+            poster="/assets/homepage/hero/hero-background.jpg"
             onLoadedData={() => setVideoLoaded(true)}
             onError={() => setVideoError(true)}
           >
             <source
-              src="/assets/homepage/hero/cosmic-portal.mp4"
+              src="/assets/homepage/hero/hero-background.jpg"
               type="video/mp4"
             />
           </video>
         ) : (
           <div className="w-full h-full bg-gradient-to-br from-deep-blue/80 via-deep-blue/90 to-deep-blue/80 flex items-center justify-center">
             <Image
-              src="/assets/homepage/hero/galaxy-cityscape.jpg"
+              src="/assets/homepage/hero/hero-background.jpg"
               alt="Cosmic Portal"
               fill
               className="object-cover opacity-80"
@@ -90,9 +90,12 @@ export default function HeroPortalEntry() {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="text-xl sm:text-2xl lg:text-3xl text-text-white mb-8 max-w-4xl mx-auto leading-relaxed"
           >
-            Step through the portal. At Orson Vision, we architect immersive
-            cinematic universes that captivate, inspire, and endure across
-            dimensions.
+            Step through the portal. At Orson Vision, we don't just build
+            digital products; we architect immersive cinematic universes that
+            captivate, inspire, and endure across dimensions. Born from the
+            visionary spirit of Oussama Naffati, and inspired by the boundless
+            creativity of Orson Welles, our universe began its genesis in the
+            heart of Tunisia.
           </motion.p>
 
           {/* Golden Accent Line */}
@@ -161,7 +164,7 @@ export default function HeroPortalEntry() {
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           animate={{
             y: [0, -20, 0],

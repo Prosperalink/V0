@@ -10,7 +10,7 @@ import ThemeToggle from './ThemeToggle';
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState('');
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -20,27 +20,6 @@ export default function Navigation() {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: '-20% 0px -80% 0px',
-      threshold: 0,
-    };
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    }, observerOptions);
-
-    const sections = document.querySelectorAll('section[id]');
-    sections.forEach(section => observer.observe(section));
-
-    return () => observer.disconnect();
   }, []);
 
   // Handle escape key to close mobile menu
@@ -73,13 +52,28 @@ export default function Navigation() {
   }, [isOpen]);
 
   const navItems = [
-    { name: 'Services', href: '#services', id: 'services' },
-    { name: 'Portfolio', href: '#portfolio', id: 'portfolio' },
-    { name: 'Processus', href: '#process', id: 'process' },
-    { name: 'Contact', href: '#contact', id: 'contact' },
+    { name: 'Services', href: '/services', id: 'services' },
+    {
+      name: 'Planets of Partnership',
+      href: '#',
+      id: 'planets',
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'Corporate', href: '/planets-of-partnership/corporate' },
+        { name: 'SMEs', href: '/planets-of-partnership/smes' },
+        { name: 'Weddings', href: '/planets-of-partnership/weddings' },
+        { name: 'Tourism', href: '/planets-of-partnership/tourism' },
+        { name: 'Healthcare', href: '/planets-of-partnership/healthcare' },
+        { name: 'Schools', href: '/planets-of-partnership/schools' },
+        { name: 'Nonprofits', href: '/planets-of-partnership/nonprofits' },
+        { name: 'Fashion', href: '/planets-of-partnership/fashion' },
+        { name: 'Artists', href: '/planets-of-partnership/artists' },
+      ],
+    },
+    { name: 'Portfolio', href: '/portfolio', id: 'portfolio' },
+    { name: 'Process', href: '/process', id: 'process' },
+    { name: 'Contact', href: '/contact', id: 'contact' },
   ];
-
-  const isActive = (id: string) => activeSection === id;
 
   return (
     <>
@@ -105,7 +99,12 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            {/* <Logo variant="primary" className="text-cream-white" /> */}
+            <Link
+              href="/"
+              className="text-2xl font-bold text-golden-accent font-cinematic"
+            >
+              Orson Vision
+            </Link>
 
             {/* Desktop Navigation */}
             <nav
@@ -113,39 +112,78 @@ export default function Navigation() {
               role="menubar"
             >
               {navItems.map(item => (
-                <Link
+                <div
                   key={item.name}
-                  href={item.href}
-                  className={`transition-all duration-300 relative focus-ring font-semibold text-lg px-2 ${
-                    isActive(item.id)
-                      ? 'text-true-blue font-extrabold'
-                      : 'text-cream-white hover:text-true-blue'
-                  }`}
-                  role="menuitem"
-                  aria-current={isActive(item.id) ? 'page' : undefined}
+                  className="relative"
+                  onMouseEnter={() =>
+                    item.hasDropdown && setActiveDropdown(item.id)
+                  }
+                  onMouseLeave={() => setActiveDropdown(null)}
                 >
-                  {item.name}
-                  {isActive(item.id) && (
-                    <motion.div
-                      layoutId="activeIndicator"
-                      className="absolute -bottom-2 left-0 right-0 h-1 rounded-full bg-gradient-to-r from-true-blue via-blue-400 to-blue-600 shadow-lg"
-                      initial={false}
-                      transition={{
-                        type: 'spring',
-                        stiffness: 300,
-                        damping: 30,
-                      }}
-                    />
+                  {item.hasDropdown ? (
+                    <button
+                      className="transition-all duration-300 relative focus-ring font-semibold text-lg px-2 text-cream-white hover:text-golden-accent flex items-center"
+                      role="menuitem"
+                      aria-expanded={activeDropdown === item.id}
+                      aria-haspopup="true"
+                    >
+                      {item.name}
+                      <svg
+                        className="ml-1 w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="transition-all duration-300 relative focus-ring font-semibold text-lg px-2 text-cream-white hover:text-golden-accent"
+                      role="menuitem"
+                    >
+                      {item.name}
+                    </Link>
                   )}
-                </Link>
+
+                  {/* Dropdown Menu */}
+                  {item.hasDropdown && activeDropdown === item.id && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      className="absolute top-full left-0 mt-2 w-64 bg-deep-charcoal/95 backdrop-blur-md rounded-lg shadow-xl border border-cream-white/10 z-50"
+                      role="menu"
+                    >
+                      <div className="py-2">
+                        {item.dropdownItems?.map(dropdownItem => (
+                          <Link
+                            key={dropdownItem.name}
+                            href={dropdownItem.href}
+                            className="block px-4 py-2 text-cream-white hover:text-golden-accent hover:bg-cream-white/5 transition-colors duration-300"
+                            role="menuitem"
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </div>
               ))}
 
               {/* Theme Toggle */}
               <ThemeToggle />
 
               <Link
-                href="#contact"
-                className="bg-gradient-to-r from-true-blue via-blue-400 to-blue-600 text-cream-white px-7 py-2 rounded-lg font-bold shadow-xl hover:scale-105 transition-all duration-300 focus-ring border-2 border-true-blue/40"
+                href="/contact"
+                className="bg-gradient-to-r from-golden-accent to-golden-subtle text-deep-blue px-7 py-2 rounded-lg font-bold shadow-xl hover:scale-105 transition-all duration-300 focus-ring border-2 border-golden-accent/40"
                 role="menuitem"
               >
                 Commencer
@@ -158,7 +196,7 @@ export default function Navigation() {
               <button
                 ref={buttonRef}
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-cream-white hover:text-true-blue transition-colors duration-300 p-2 focus-ring"
+                className="text-cream-white hover:text-golden-accent transition-colors duration-300 p-2 focus-ring"
                 aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
                 aria-expanded={isOpen}
                 aria-controls="mobile-menu"
@@ -181,27 +219,73 @@ export default function Navigation() {
             >
               <div className="px-2 pt-2 pb-3 space-y-1 bg-deep-charcoal/95 backdrop-blur-md rounded-lg mt-2 border border-cream-white/10">
                 {navItems.map(item => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className={`block px-3 py-2 rounded-md transition-colors duration-300 focus-ring ${
-                      isActive(item.id)
-                        ? 'text-true-blue bg-true-blue/10'
-                        : 'text-cream-white hover:text-true-blue hover:bg-cream-white/5'
-                    }`}
-                    onClick={() => setIsOpen(false)}
-                    role="menuitem"
-                    aria-current={isActive(item.id) ? 'page' : undefined}
-                  >
-                    {item.name}
-                  </a>
+                  <div key={item.name}>
+                    {item.hasDropdown ? (
+                      <div>
+                        <button
+                          className="w-full text-left px-3 py-2 rounded-md transition-colors duration-300 focus-ring text-cream-white hover:text-golden-accent hover:bg-cream-white/5 flex items-center justify-between"
+                          onClick={() =>
+                            setActiveDropdown(
+                              activeDropdown === item.id ? null : item.id
+                            )
+                          }
+                          role="menuitem"
+                          aria-expanded={activeDropdown === item.id}
+                        >
+                          {item.name}
+                          <svg
+                            className={`w-4 h-4 transition-transform duration-300 ${activeDropdown === item.id ? 'rotate-180' : ''}`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M19 9l-7 7-7-7"
+                            />
+                          </svg>
+                        </button>
+                        {activeDropdown === item.id && (
+                          <div className="ml-4 mt-1 space-y-1">
+                            {item.dropdownItems?.map(dropdownItem => (
+                              <Link
+                                key={dropdownItem.name}
+                                href={dropdownItem.href}
+                                className="block px-3 py-2 rounded-md transition-colors duration-300 focus-ring text-cream-white/80 hover:text-golden-accent hover:bg-cream-white/5 text-sm"
+                                onClick={() => {
+                                  setIsOpen(false);
+                                  setActiveDropdown(null);
+                                }}
+                                role="menuitem"
+                              >
+                                {dropdownItem.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <Link
+                        href={item.href}
+                        className="block px-3 py-2 rounded-md transition-colors duration-300 focus-ring text-cream-white hover:text-golden-accent hover:bg-cream-white/5"
+                        onClick={() => setIsOpen(false)}
+                        role="menuitem"
+                      >
+                        {item.name}
+                      </Link>
+                    )}
+                  </div>
                 ))}
-                <button
-                  className="w-full mt-4 btn-primary focus-ring"
+                <Link
+                  href="/contact"
+                  className="w-full mt-4 btn-primary focus-ring block text-center"
                   role="menuitem"
+                  onClick={() => setIsOpen(false)}
                 >
                   Commencer
-                </button>
+                </Link>
               </div>
             </motion.div>
           )}

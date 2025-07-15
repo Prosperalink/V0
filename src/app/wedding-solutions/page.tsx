@@ -20,7 +20,7 @@ export default function WeddingSolutionsPage() {
         <section className="py-20 bg-gradient-to-br from-pink-50 to-red-50 dark:from-pink-900/20 dark:to-red-900/20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-[var(--color-foreground)] mb-6">
+              <h1 className="text-5xl md:text-6xl font-bold text-[var(--color-foreground)] mb-6 golden-text-high-contrast">
                 Capturez Votre Jour Parfait
               </h1>
               <p className="text-xl text-[var(--text-secondary)] max-w-3xl mx-auto mb-8">

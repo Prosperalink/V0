@@ -16,7 +16,11 @@
   --golden-accent: #ffd700;
   --golden-subtle: #ffed4e;
   --golden-dark: #b8860b;
-  --golden-glow: rgba(255, 215, 0, 0.1);
+  --golden-glow: rgba(255, 215, 0, 0.05);
+
+  /* High Contrast Golden Variants for Light Backgrounds */
+  --golden-accent-dark: #d4af37;
+  --golden-accent-darker: #b8860b;
 
   /* Text Colors */
   --text-primary: #ffffff;
@@ -261,13 +265,13 @@ h6 {
 
 /* Backdrop blur effects */
 .backdrop-blur-sm {
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .backdrop-blur-md {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 /* Gradient overlays for cards */
@@ -387,4 +391,26 @@ a:focus {
     --text-subtle: #e0e0e0;
     --border-golden: rgba(255, 215, 0, 0.8);
   }
+}
+
+/* Enhanced contrast for golden text on light backgrounds */
+.golden-text-high-contrast {
+  color: var(--golden-accent-dark);
+  font-weight: 600;
+}
+
+.golden-text-darker {
+  color: var(--golden-accent-darker);
+  font-weight: 700;
+}
+
+/* Ensure text selection works properly */
+::selection {
+  background-color: rgba(255, 215, 0, 0.3);
+  color: var(--text-primary);
+}
+
+::-moz-selection {
+  background-color: rgba(255, 215, 0, 0.3);
+  color: var(--text-primary);
 }

@@ -1,109 +1,213 @@
 'use client';
 
-import SolutionsMatrix from '@/components/SolutionsMatrix';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function MatrixGalacticMap() {
   return (
-    <section className="py-20 bg-gradient-to-br from-dark-tone via-deep-blue to-dark-tone">
-      <div className="container mx-auto px-6">
+    <section className="py-20 bg-gradient-to-br from-deep-blue via-dark-tone to-deep-blue overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-deep-blue/30 via-dark-tone/20 to-deep-blue/30 pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-golden-glow rounded-full blur-3xl opacity-10 pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-golden-glow rounded-full blur-3xl opacity-10 pointer-events-none" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-cinematic font-bold mb-6 text-golden-accent"
-          >
-            The Solutions Matrix
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-xl text-text-white max-w-3xl mx-auto"
-          >
-            Navigate through our cosmic array of digital solutions, each a
-            unique dimension in the Orson Vision universe.
-          </motion.p>
-
-          {/* Golden Accent Line */}
-          <motion.div
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            transition={{ duration: 1.2, delay: 0.6 }}
-            viewport={{ once: true }}
-            className="w-32 h-1 bg-gradient-to-r from-golden-accent to-yellow-400 mx-auto mt-8"
-          />
+          <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-6 font-cinematic">
+            The Galactic Map
+          </h2>
+          <p className="text-xl text-text-secondary max-w-3xl mx-auto">
+            Explore the vastness of our Cinematic Universe. Our 'Galactic Map'
+            reveals the diverse 'Planets of Partnership' we orbit and the
+            'Nebulas of Expertise' that define our cosmic capabilities. Click on
+            any celestial body to discover how we chart a course for your
+            success or delve deeper into a specific client 'Planet'.
+          </p>
         </motion.div>
 
+        {/* Planets of Partnership Grid */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative"
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-16"
         >
-          {/* Background decorative elements for cosmic atmosphere */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <motion.div
-              animate={{
-                y: [0, -20, 0],
-                opacity: [0.3, 0.6, 0.3],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-              className="absolute top-20 left-10 w-2 h-2 bg-golden-accent rounded-full"
-            />
-            <motion.div
-              animate={{
-                y: [0, 30, 0],
-                opacity: [0.2, 0.5, 0.2],
-              }}
-              transition={{
-                duration: 10,
-                repeat: Infinity,
-                ease: 'easeInOut',
-                delay: 2,
-              }}
-              className="absolute top-40 right-20 w-1 h-1 bg-golden-accent rounded-full"
-            />
-            <motion.div
-              animate={{
-                y: [0, -15, 0],
-                x: [0, 10, 0],
-                opacity: [0.4, 0.7, 0.4],
-              }}
-              transition={{
-                duration: 12,
-                repeat: Infinity,
-                ease: 'easeInOut',
-                delay: 4,
-              }}
-              className="absolute bottom-40 left-1/4 w-1.5 h-1.5 bg-golden-accent rounded-full"
-            />
+          <h3 className="text-3xl font-bold text-golden-accent mb-8 text-center">
+            Planets of Partnership
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+            {[
+              {
+                name: 'Corporate Planet',
+                image:
+                  '/assets/planets-of-partnership/corporate/corporate-thumbnail.jpg',
+              },
+              {
+                name: 'SME Planet',
+                image: '/assets/planets-of-partnership/smes/smes-thumbnail.jpg',
+              },
+              {
+                name: 'Wedding Planet',
+                image:
+                  '/assets/planets-of-partnership/weddings/weddings-thumbnail.jpg',
+              },
+              {
+                name: 'Tourism Planet',
+                image:
+                  '/assets/planets-of-partnership/tourism/tourism-thumbnail.jpg',
+              },
+              {
+                name: 'Healthcare Planet',
+                image:
+                  '/assets/planets-of-partnership/healthcare/healthcare-thumbnail.jpg',
+              },
+              {
+                name: 'Schools Planet',
+                image:
+                  '/assets/planets-of-partnership/schools/schools-thumbnail.jpg',
+              },
+              {
+                name: 'NonProfit Planet',
+                image:
+                  '/assets/planets-of-partnership/nonprofits/nonprofits-thumbnail.jpg',
+              },
+              {
+                name: 'Fashion Planet',
+                image:
+                  '/assets/planets-of-partnership/fashion/fashion-thumbnail.jpg',
+              },
+            ].map((planet, index) => (
+              <motion.div
+                key={planet.name}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ scale: 1.1, y: -5 }}
+                className="group cursor-pointer"
+              >
+                <div className="relative">
+                  <Image
+                    src={planet.image}
+                    alt={planet.name}
+                    width={100}
+                    height={100}
+                    className="w-full h-auto rounded-full border-2 border-golden-accent/30 group-hover:border-golden-accent transition-all duration-300"
+                  />
+                  <div className="absolute inset-0 rounded-full bg-golden-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <p className="text-xs text-text-subtle text-center mt-2 group-hover:text-golden-accent transition-colors duration-300">
+                  {planet.name}
+                </p>
+              </motion.div>
+            ))}
           </div>
-
-          {/* Solutions Matrix with enhanced styling */}
-          <div className="relative z-10">
-            <SolutionsMatrix />
-          </div>
-
-          {/* Additional cosmic elements */}
-          <div className="absolute -top-8 -left-8 w-32 h-32 bg-golden-accent/5 rounded-full blur-xl" />
-          <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-golden-accent/3 rounded-full blur-xl" />
         </motion.div>
+
+        {/* Nebulas of Expertise Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <h3 className="text-3xl font-bold text-golden-accent mb-8 text-center">
+            Nebulas of Expertise
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+            {[
+              {
+                name: 'Video Production Nebula',
+                image: '/assets/services/nebulas/video-thumbnail.jpg',
+              },
+              {
+                name: 'Cinematic Production Nebula',
+                image: '/assets/services/nebulas/cinematic-thumbnail.jpg',
+              },
+              {
+                name: 'Motion Design Nebula',
+                image: '/assets/services/nebulas/motion-thumbnail.jpg',
+              },
+              {
+                name: 'Photography Nebula',
+                image: '/assets/services/nebulas/photography-thumbnail.jpg',
+              },
+              {
+                name: 'Graphic Design Nebula',
+                image: '/assets/services/nebulas/graphic-thumbnail.jpg',
+              },
+              {
+                name: 'Web Creation Nebula',
+                image: '/assets/services/nebulas/web-thumbnail.jpg',
+              },
+              {
+                name: 'Digital Marketing Nebula',
+                image: '/assets/services/nebulas/marketing-thumbnail.jpg',
+              },
+              {
+                name: 'Specialized Services Nebula',
+                image: '/assets/services/nebulas/specialized-thumbnail.jpg',
+              },
+            ].map((nebula, index) => (
+              <motion.div
+                key={nebula.name}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ scale: 1.1, y: -5 }}
+                className="group cursor-pointer"
+              >
+                <div className="relative">
+                  <Image
+                    src={nebula.image}
+                    alt={nebula.name}
+                    width={100}
+                    height={100}
+                    className="w-full h-auto rounded-full border-2 border-golden-accent/30 group-hover:border-golden-accent transition-all duration-300"
+                  />
+                  <div className="absolute inset-0 rounded-full bg-golden-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <p className="text-xs text-text-subtle text-center mt-2 group-hover:text-golden-accent transition-colors duration-300">
+                  {nebula.name}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-center mt-16"
+        >
+          <p className="text-lg text-text-secondary mb-6">
+            Navigate through our cosmic array of digital solutions, each a
+            unique constellation of expertise designed to illuminate your path
+            through the digital universe.
+          </p>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-gradient-to-r from-golden-accent to-yellow-400 text-deep-blue px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            Explore Our Galactic Map
+          </motion.button>
+        </motion.div>
+
+        {/* Background decorative elements for cosmic atmosphere */}
+        <div className="absolute top-20 left-10 w-2 h-2 bg-golden-accent rounded-full opacity-40 animate-pulse pointer-events-none" />
+        <div className="absolute top-40 right-20 w-1 h-1 bg-golden-accent rounded-full opacity-30 animate-pulse pointer-events-none" />
+        <div className="absolute bottom-20 left-1/3 w-1.5 h-1.5 bg-golden-accent rounded-full opacity-50 animate-pulse pointer-events-none" />
       </div>
     </section>
   );

@@ -1,8 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
-import Image from 'next/image';
 import { useState } from 'react';
 
 export default function ServicesHeroNebulas() {
@@ -13,7 +11,7 @@ export default function ServicesHeroNebulas() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-deep-blue/95 via-deep-blue/80 to-deep-blue/95 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-deep-blue/95 via-dark-tone/80 to-deep-blue/95 z-10" />
         {!videoError ? (
           <video
             autoPlay
@@ -23,30 +21,28 @@ export default function ServicesHeroNebulas() {
             className={`w-full h-full object-cover transition-opacity duration-1000 ${
               videoLoaded ? 'opacity-100' : 'opacity-0'
             }`}
-            poster="/assets/services/hero/nebula-formation.jpg"
+            poster="/assets/services/hero/services-hero.jpg"
             onLoadedData={() => setVideoLoaded(true)}
             onError={() => setVideoError(true)}
           >
             <source
-              src="/assets/services/hero/nebula-formation.mp4"
+              src="/assets/services/hero/services-hero.jpg"
               type="video/mp4"
             />
           </video>
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-deep-blue/80 via-deep-blue/90 to-deep-blue/80 flex items-center justify-center">
-            <Image
-              src="/assets/services/hero/nebula-formation.jpg"
+          <div className="w-full h-full bg-gradient-to-br from-deep-blue/80 via-dark-tone/90 to-deep-blue/80 flex items-center justify-center">
+            <img
+              src="/assets/services/hero/services-hero.jpg"
               alt="Nebula Formation"
-              fill
-              className="object-cover opacity-80"
-              priority
+              className="w-full h-full object-cover opacity-80"
             />
           </div>
         )}
         {/* Loading indicator */}
         {!videoLoaded && !videoError && (
           <div className="absolute inset-0 flex items-center justify-center z-20">
-            <div className="spinner w-8 h-8"></div>
+            <div className="spinner w-8 h-8" />
           </div>
         )}
       </div>
@@ -67,7 +63,7 @@ export default function ServicesHeroNebulas() {
             className="inline-flex items-center px-6 py-3 rounded-full bg-golden-accent/20 backdrop-blur-sm border border-golden-accent/30 shadow-lg"
           >
             <span className="text-sm font-semibold tracking-wide">
-              Our Expertise Nebulas
+              Nebulas of Expertise
             </span>
           </motion.div>
 
@@ -92,9 +88,11 @@ export default function ServicesHeroNebulas() {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="text-xl sm:text-2xl lg:text-3xl text-text-white mb-8 max-w-4xl mx-auto leading-relaxed"
           >
-            Explore our cosmic array of digital solutions, each a unique nebula
-            of expertise designed to illuminate your path through the digital
-            universe.
+            Navigate through our specialized 'Nebulas of Expertise,' each a
+            vibrant cluster of services designed to expand your brand's presence
+            across the digital universe. From the creation of captivating visual
+            dimensions to the engineering of seamless digital pathways, our
+            solutions are tailored to your cosmic ambition.
           </motion.p>
 
           {/* Golden Accent Line */}
@@ -105,55 +103,30 @@ export default function ServicesHeroNebulas() {
             className="w-32 h-1 bg-gradient-to-r from-golden-accent to-yellow-400 mx-auto mb-12"
           />
 
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
-          >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-golden-accent to-yellow-400 text-deep-blue px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-3 shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-golden-accent focus:ring-offset-2 focus:ring-offset-deep-blue"
-            >
-              Explore Our Services
-              <ArrowRight className="w-5 h-5" />
-            </motion.button>
-
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="border-2 border-golden-accent text-golden-accent px-8 py-4 rounded-lg font-semibold text-lg hover:bg-golden-accent hover:text-deep-blue transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-golden-accent focus:ring-offset-2 focus:ring-offset-deep-blue"
-            >
-              View Our Portfolio
-            </motion.button>
-          </motion.div>
-
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 1 }}
+            transition={{ duration: 1, delay: 0.8 }}
             className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto"
           >
             <div className="text-center">
               <div className="text-3xl font-bold text-golden-accent mb-2">
-                8+
+                8
               </div>
-              <div className="text-text-subtle">Service Nebulas</div>
+              <div className="text-text-subtle">Nebulas of Expertise</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-golden-accent mb-2">
-                500+
+                25+
               </div>
-              <div className="text-text-subtle">Projects Completed</div>
+              <div className="text-text-subtle">Specialized Services</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-golden-accent mb-2">
-                98%
+                100%
               </div>
-              <div className="text-text-subtle">Client Satisfaction</div>
+              <div className="text-text-subtle">Cosmic Satisfaction</div>
             </div>
           </motion.div>
         </motion.div>

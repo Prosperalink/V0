@@ -9,7 +9,7 @@ export default function ContactHeroCommand() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-deep-blue/95 via-deep-blue/80 to-deep-blue/95 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-deep-blue/95 via-deep-blue/80 to-deep-blue/95 z-10" />
         <Image
           src="/assets/contact/hero/nexus-command.jpg"
           alt="The Nexus Command Center"

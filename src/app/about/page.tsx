@@ -3,9 +3,9 @@ import AboutTeamCrew from '@/components/sections/AboutTeamCrew';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About - Our Cosmic Genesis',
+  title: 'About - Our Cosmic Genesis: The Birth of a Digital Universe',
   description:
-    'From a singular vision, a universe unfolded. Born from the visionary spirit of Oussama Naffati, and inspired by the boundless creativity of Orson Welles, our universe began its genesis in the heart of Tunisia.',
+    'From a singular vision, a universe unfolded. Orson Vision was conceived by Oussama Naffati, a cinema director with a profound understanding of narrative and visual impact. Inspired by the pioneering spirit of Orson Welles, our journey began as a quest to infuse the digital realm with cinematic grandeur, rooted deeply in the vibrant landscape of Tunisia.',
   keywords: [
     'about orson vision',
     'cosmic genesis',
@@ -15,16 +15,19 @@ export const metadata: Metadata = {
     'cinematic solutions',
     'team',
     'philosophy',
+    'orson welles',
+    'cinema director',
+    'digital transformation',
   ].join(', '),
   openGraph: {
-    title: 'About - Our Cosmic Genesis',
+    title: 'About - Our Cosmic Genesis: The Birth of a Digital Universe',
     description:
-      'From a singular vision, a universe unfolded. Born from the visionary spirit of Oussama Naffati, and inspired by the boundless creativity of Orson Welles.',
+      'From a singular vision, a universe unfolded. Orson Vision was conceived by Oussama Naffati, a cinema director with a profound understanding of narrative and visual impact.',
     url: 'https://orsonvision.com/about',
     siteName: 'Orson Vision',
     images: [
       {
-        url: '/assets/about/hero/cosmic-genesis.jpg',
+        url: 'https://placehold.co/1200x630/0A0A0F/FFED4E?text=Cosmic+Genesis',
         width: 1200,
         height: 630,
         alt: 'Our Cosmic Genesis - Orson Vision',
@@ -35,10 +38,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About - Our Cosmic Genesis',
+    title: 'About - Our Cosmic Genesis: The Birth of a Digital Universe',
     description:
-      'From a singular vision, a universe unfolded. Born from the visionary spirit of Oussama Naffati, and inspired by the boundless creativity of Orson Welles.',
-    images: ['/assets/about/hero/cosmic-genesis.jpg'],
+      'From a singular vision, a universe unfolded. Orson Vision was conceived by Oussama Naffati, a cinema director with a profound understanding of narrative and visual impact.',
+    images: ['https://placehold.co/1200x630/0A0A0F/FFED4E?text=Cosmic+Genesis'],
   },
   robots: {
     index: true,
