@@ -20,7 +20,7 @@ export default function ManifestoCosmicGenesis() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-cinematic font-bold mb-8 text-golden-accent"
+              className="text-4xl md:text-5xl font-cinematic font-bold mb-8 text-golden-accent crisp-text"
             >
               The Cosmic Genesis
             </motion.h2>
@@ -30,7 +30,7 @@ export default function ManifestoCosmicGenesis() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="text-xl leading-relaxed mb-8 text-text-white"
+              className="text-xl leading-relaxed mb-8 text-text-white crisp-text"
             >
               Every pixel is a star. Every interaction, a gravitational pull.
               Every project, a new dimension brought to life. Our philosophy,
@@ -45,7 +45,7 @@ export default function ManifestoCosmicGenesis() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: true }}
-              className="text-lg text-text-subtle"
+              className="text-lg text-text-subtle crisp-text"
             >
               In the vast expanse of digital possibility, we craft universes
               where technology meets storytelling, where innovation dances with

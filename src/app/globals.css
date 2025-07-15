@@ -110,6 +110,14 @@ body {
   color: var(--text-primary);
   min-height: max(884px, 100dvh);
   line-height: 1.6;
+  /* Fix for blur issues: ensure crisp text rendering globally */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Force hardware acceleration to prevent sub-pixel rendering issues */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 h1,
@@ -142,6 +150,18 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Fix for text blur issues */
+.crisp-text {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  /* Ensure full opacity for crisp rendering */
+  opacity: 1 !important;
 }
 
 /* Premium Cinematic Effects */
