@@ -1,0 +1,34 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGradientIcon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FCD34D;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Clapperboard Icon -->
+  <rect x="8" y="12" width="40" height="32" fill="#1E293B" stroke="#F59E0B" stroke-width="1" rx="1"/>
+
+  <!-- Diagonal Stripes (Classic Clapperboard Pattern) -->
+  <rect x="8" y="12" width="40" height="8" fill="#F59E0B"/>
+  <rect x="8" y="20" width="40" height="8" fill="#0F172A"/>
+  <rect x="8" y="28" width="40" height="8" fill="#F59E0B"/>
+  <rect x="8" y="36" width="40" height="8" fill="#0F172A"/>
+
+  <!-- Frame Numbers (Top Section) -->
+  <text x="12" y="19" font-family="Inter, sans-serif" font-size="5" font-weight="bold" text-anchor="middle" fill="#0F172A">01</text>
+  <text x="24" y="19" font-family="Inter, sans-serif" font-size="5" font-weight="bold" text-anchor="middle" fill="#0F172A">02</text>
+  <text x="36" y="19" font-family="Inter, sans-serif" font-size="5" font-weight="bold" text-anchor="middle" fill="#0F172A">03</text>
+
+  <!-- Scene Information (Bottom Section) -->
+  <text x="12" y="31" font-family="Inter, sans-serif" font-size="4" fill="#F59E0B">SCENE</text>
+  <text x="12" y="35" font-family="Inter, sans-serif" font-size="4" fill="#F59E0B">TAKE</text>
+
+  <!-- "O" Integrated as Scene Number -->
+  <circle cx="32" cy="30" r="4" fill="url(#goldGradientIcon)" stroke="#F59E0B" stroke-width="0.5"/>
+  <text x="32" y="33" font-family="Inter, sans-serif" font-size="5" font-weight="bold" text-anchor="middle" fill="#0F172A">O</text>
+
+  <!-- Clapper Mechanism (Top) -->
+  <rect x="52" y="12" width="4" height="32" fill="#1E293B" stroke="#F59E0B" stroke-width="0.5" rx="0.5"/>
+  <rect x="53" y="13" width="2" height="30" fill="#F59E0B" opacity="0.8"/>
+</svg>

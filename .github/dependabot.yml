@@ -1,0 +1,22 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: 'chore(deps)'
+    labels:
+      - 'dependencies'
+      - 'dependabot'
+    reviewers:
+      - 'hasse'
+    assignees:
+      - 'hasse'
+    allow:
+      - dependency-type: 'all'
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
+    security-updates: true

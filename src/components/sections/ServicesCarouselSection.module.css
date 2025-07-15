@@ -1,0 +1,106 @@
+.hideScrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.hideScrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.filmstripOuter {
+  width: 100%;
+  background: #111;
+  position: relative;
+  padding: 2rem 0;
+  overflow: hidden;
+}
+.filmstripInner {
+  background: #111;
+  position: relative;
+  width: 100%;
+  padding: 0 2vw;
+}
+
+.cardFrame {
+  position: relative;
+  border: 8px solid #111;
+  border-radius: 4px;
+  overflow: hidden;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  height: 240px;
+  min-width: 320px;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.perforationRowLarge {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  pointer-events: none;
+  height: 12px;
+  padding: 0 4px;
+}
+.perforationRowLarge.top {
+  top: -8px;
+}
+.perforationRowLarge.bottom {
+  bottom: -8px;
+}
+.perforationLarge {
+  width: 14px;
+  height: 8px;
+  background: #fff;
+  border-radius: 1px;
+  margin: 0 1px;
+  flex-shrink: 0;
+}
+
+.perforationRowSmall {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 11;
+  pointer-events: none;
+  height: 8px;
+  padding: 0 6px;
+}
+.perforationRowSmall.top {
+  top: 0;
+}
+.perforationRowSmall.bottom {
+  bottom: 0;
+}
+.perforationSmall {
+  width: 4px;
+  height: 3px;
+  background: #fff;
+  border-radius: 1px;
+  margin: 0 1px;
+  flex-shrink: 0;
+}
+
+.verticalDivider {
+  width: 6px;
+  height: 100%;
+  background: #111;
+  position: absolute;
+  right: -3px;
+  top: 0;
+  z-index: 12;
+  border-radius: 1px;
+}

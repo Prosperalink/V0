@@ -1,0 +1,19 @@
+{
+  "Tailwind Flex Center": {
+    "prefix": "tw-flex-center",
+    "body": ["flex items-center justify-center"],
+    "description": "Tailwind flexbox center utility"
+  },
+  "Tailwind Button": {
+    "prefix": "tw-btn",
+    "body": [
+      "px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+    ],
+    "description": "Tailwind button utility"
+  },
+  "Tailwind Card": {
+    "prefix": "tw-card",
+    "body": ["bg-white shadow rounded-lg p-6"],
+    "description": "Tailwind card utility"
+  }
+}

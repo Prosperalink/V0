@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🔍 Running pre-commit checks..."
+
+# Run CSS validation
+echo "📝 Validating CSS files..."
+npm run validate-css
+
+# Run other quality checks
+echo "🔧 Running quality gate..."
+npm run quality-gate
+
+echo "✅ Pre-commit checks completed successfully!"

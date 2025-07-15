@@ -1,0 +1,429 @@
+{
+  "qualityRules": {
+    "eslint": {
+      "configFile": ".eslintrc.json",
+      "autoApply": true,
+      "strictMode": true,
+      "rules": {
+        "namingConventions": {
+          "interfaces": {
+            "format": "PascalCase",
+            "prefix": "I",
+            "enforcement": "error"
+          },
+          "typeAliases": {
+            "format": "PascalCase",
+            "enforcement": "error"
+          },
+          "variables": {
+            "format": ["camelCase", "UPPER_CASE"],
+            "leadingUnderscore": "forbid",
+            "trailingUnderscore": "forbid",
+            "enforcement": "error"
+          },
+          "parameters": {
+            "format": "camelCase",
+            "leadingUnderscore": "forbid",
+            "enforcement": "error"
+          },
+          "reactComponents": {
+            "format": "PascalCase",
+            "enforcement": "error"
+          },
+          "functions": {
+            "format": "camelCase",
+            "enforcement": "error"
+          },
+          "constants": {
+            "format": "UPPER_CASE",
+            "enforcement": "error"
+          }
+        },
+        "importOrder": {
+          "groups": [
+            "builtin",
+            "external",
+            "internal",
+            "parent",
+            "sibling",
+            "index"
+          ],
+          "newlinesBetween": "always",
+          "alphabetize": {
+            "order": "asc",
+            "caseInsensitive": true
+          },
+          "enforcement": "error"
+        },
+        "codeQuality": {
+          "preferConst": "error",
+          "noVar": "error",
+          "noConsole": "warn",
+          "noDebugger": "error",
+          "noUnusedVars": "error",
+          "noExplicitAny": "warn"
+        }
+      }
+    },
+    "prettier": {
+      "configFile": ".prettierrc",
+      "autoFormat": true,
+      "rules": {
+        "semi": true,
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 80,
+        "tabWidth": 2,
+        "useTabs": false,
+        "bracketSpacing": true,
+        "bracketSameLine": false,
+        "arrowParens": "avoid",
+        "endOfLine": "lf",
+        "quoteProps": "as-needed",
+        "jsxSingleQuote": true,
+        "proseWrap": "preserve"
+      }
+    },
+    "typescript": {
+      "configFile": "tsconfig.json",
+      "strictMode": true,
+      "rules": {
+        "noImplicitAny": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "exactOptionalPropertyTypes": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUncheckedIndexedAccess": true,
+        "noImplicitThis": true,
+        "noImplicitOverride": true,
+        "allowUnreachableCode": false,
+        "allowUnusedLabels": false
+      }
+    },
+    "testing": {
+      "framework": "jest",
+      "library": "react-testing-library",
+      "patterns": {
+        "naming": "ComponentName.test.tsx",
+        "location": "tests/components/",
+        "coLocation": "src/components/ComponentName.test.tsx",
+        "mocks": [
+          "AnimationObserver",
+          "next/router",
+          "IntersectionObserver",
+          "ResizeObserver"
+        ],
+        "testStructure": {
+          "imports": [
+            "import { render, screen, fireEvent } from '@testing-library/react';",
+            "import '@testing-library/jest-dom';",
+            "import { ComponentName } from './ComponentName';"
+          ],
+          "mockPattern": "jest.mock('@/components/AnimationObserver', () => { return function MockAnimationObserver(props) { return <div data-testid='animation-observer' {...props}>{props.children}</div>; }; });",
+          "describeBlock": "describe('ComponentName', () => { beforeEach(() => { render(<ComponentName />); });",
+          "testPatterns": [
+            "it('renders without crashing', () => { expect(screen.getByTestId('component-name')).toBeInTheDocument(); });",
+            "it('handles user interactions correctly', () => { fireEvent.click(screen.getByRole('button')); expect(mockFunction).toHaveBeenCalled(); });"
+          ]
+        }
+      },
+      "autoCreate": true,
+      "autoUpdate": true,
+      "coverage": {
+        "required": true,
+        "threshold": 90
+      }
+    },
+    "security": {
+      "rules": {
+        "noEval": true,
+        "noInnerHTML": true,
+        "inputValidation": true,
+        "xssPrevention": true,
+        "csrfProtection": true
+      },
+      "audit": {
+        "npmAudit": true,
+        "level": "moderate"
+      }
+    },
+    "performance": {
+      "bundleAnalysis": true,
+      "lighthouseCI": true,
+      "imageOptimization": true,
+      "codeSplitting": true
+    },
+    "documentation": {
+      "organization": {
+        "rootFolder": "docs/",
+        "categories": {
+          "technical": "docs/technical/",
+          "project": "docs/project/",
+          "uxUi": "docs/ux-ui/",
+          "copywriting": "docs/copywriting/",
+          "brand": "docs/brand/",
+          "assets": "docs/assets/"
+        }
+      },
+      "naming": {
+        "format": "kebab-case",
+        "examples": [
+          "development-environment-guidelines.md",
+          "api-documentation.md",
+          "deployment-guide.md"
+        ]
+      },
+      "content": {
+        "structure": {
+          "title": true,
+          "description": true,
+          "tableOfContents": true,
+          "headingHierarchy": ["H1", "H2", "H3"],
+          "lastUpdated": true,
+          "version": true
+        },
+        "markdown": {
+          "syntax": "proper",
+          "codeBlocks": "withLanguage",
+          "tables": "structured",
+          "links": "related"
+        }
+      }
+    },
+    "gitHygiene": {
+      "commitMessage": {
+        "format": "conventional",
+        "types": ["feat", "fix", "docs", "style", "refactor", "test", "chore"]
+      },
+      "branchNaming": {
+        "feature": "feature/component-name",
+        "fix": "fix/issue-description",
+        "hotfix": "hotfix/critical-issue"
+      },
+      "hooks": {
+        "preCommit": true,
+        "prePush": true
+      }
+    },
+    "complexityThresholds": {
+      "cyclomatic": 10,
+      "cognitive": 15,
+      "maxFunctionLength": 50,
+      "maxFileLength": 500
+    },
+    "maintainability": {
+      "minScore": 80,
+      "scoringHeuristics": [
+        "short functions",
+        "clear variable names",
+        "low duplication",
+        "modular structure"
+      ]
+    }
+  },
+  "architecture": {
+    "layering": {
+      "ui": ["services"],
+      "services": ["data"],
+      "data": []
+    },
+    "designPatterns": {
+      "api": "apiService",
+      "state": "zustand"
+    },
+    "forbiddenDependencies": [{ "from": "ui", "to": "data" }]
+  },
+  "performance": {
+    "bundleBudgetKb": 250,
+    "maxSyncRenderMs": 50
+  },
+  "security": {
+    "threatModeling": true,
+    "defaultInputSanitization": true,
+    "outputEncoding": true,
+    "sastEnabled": true
+  },
+  "workflow": {
+    "draftMode": true,
+    "autoFixOnSave": true,
+    "aiTdd": true,
+    "intelligentStaging": true,
+    "commitMessage": {
+      "conventional": true,
+      "autoScope": true
+    },
+    "precomputedCiCdInsights": true
+  },
+  "autoCorrection": {
+    "enabled": true,
+    "rules": {
+      "formatting": {
+        "autoApply": true,
+        "onSave": true,
+        "onGeneration": true
+      },
+      "linting": {
+        "autoFix": true,
+        "highlightViolations": true,
+        "preventGeneration": true
+      },
+      "testing": {
+        "autoCreate": true,
+        "autoUpdate": true,
+        "syncWithComponent": true
+      }
+    }
+  },
+  "qualityEnhancement": {
+    "errorHandling": {
+      "robust": true,
+      "explicit": true,
+      "gracefulDegradation": true,
+      "noSilentFailures": true
+    },
+    "accessibility": {
+      "byDesign": true,
+      "ariaLabels": true,
+      "keyboardNavigation": true,
+      "semanticHTML": true
+    },
+    "performance": {
+      "awareness": true,
+      "memoization": true,
+      "efficientDataStructures": true,
+      "avoidUnnecessaryRenders": true
+    },
+    "security": {
+      "firstMindset": true,
+      "xssPrevention": true,
+      "csrfProtection": true,
+      "secureDataHandling": true,
+      "inputSanitization": true
+    },
+    "maintainability": {
+      "readability": true,
+      "selfDocumenting": true,
+      "clearVariableNames": true,
+      "breakDownComplexLogic": true,
+      "commentsForNonObvious": true
+    },
+    "resilience": {
+      "edgeCases": true,
+      "unexpectedInputs": true,
+      "invalidData": true,
+      "unusualConditions": true
+    }
+  },
+  "feedbackLoop": {
+    "enabled": true,
+    "learning": {
+      "analyzeCorrections": true,
+      "updatePatterns": true,
+      "internalizeRules": true
+    },
+    "summarization": {
+      "frequency": "weekly",
+      "milestoneBased": true,
+      "patternRecognition": true
+    }
+  },
+  "testSynchronization": {
+    "identification": {
+      "algorithm": "findTestFile",
+      "locations": ["tests/components/", "src/components/"],
+      "patterns": ["ComponentName.test.tsx", "ComponentName.spec.tsx"]
+    },
+    "update": {
+      "onComponentChange": true,
+      "preserveSpirit": true,
+      "adjustQueries": true,
+      "modifyEvents": true,
+      "updateRenders": true,
+      "ensurePassing": true
+    },
+    "creation": {
+      "forNewComponents": true,
+      "templateBased": true,
+      "comprehensiveCoverage": true,
+      "properMocking": true
+    }
+  },
+  "aiQualityEnforcement": {
+    "enabled": true,
+    "autoApply": true,
+    "testSynchronization": true,
+    "documentationSync": true,
+    "securityChecks": true,
+    "performanceChecks": true,
+    "accessibilityChecks": true,
+    "promptTemplates": {
+      "component": "Create a React component named [ComponentName] that follows all project quality standards including TypeScript strict mode, proper naming conventions, accessibility, security, and comprehensive testing.",
+      "utility": "Create a utility function [functionName] that follows all project quality standards including TypeScript strict mode, proper naming conventions, security, and comprehensive testing.",
+      "test": "Create comprehensive tests for [ComponentName] following project testing patterns with proper mocking and 90%+ coverage.",
+      "documentation": "Create/update documentation for [ComponentName] following project documentation standards."
+    },
+    "qualityGates": {
+      "lint": true,
+      "typeCheck": true,
+      "format": true,
+      "test": true,
+      "security": true,
+      "performance": true,
+      "accessibility": true
+    },
+    "autoRemediation": {
+      "enabled": true,
+      "fixLintErrors": true,
+      "fixTypeErrors": true,
+      "applyFormatting": true,
+      "updateTests": true,
+      "updateDocumentation": true
+    },
+    "learning": {
+      "enabled": true,
+      "storeCorrections": true,
+      "updatePatterns": true,
+      "preventRecurrence": true
+    }
+  },
+  "workflow": {
+    "preCommit": {
+      "qualityGates": true,
+      "testCoverage": true,
+      "documentationCheck": true
+    },
+    "prePush": {
+      "standardsCheck": true,
+      "testVerification": true
+    },
+    "ci": {
+      "qualityEnforcement": true,
+      "securityScan": true,
+      "performanceCheck": true
+    }
+  },
+  "templates": {
+    "component": {
+      "structure": "functional component with TypeScript",
+      "naming": "PascalCase",
+      "interface": "I[ComponentName]Props",
+      "imports": "React → External → Internal → Relative",
+      "testing": "Jest + React Testing Library",
+      "documentation": "JSDoc comments"
+    },
+    "utility": {
+      "structure": "pure function with TypeScript",
+      "naming": "camelCase",
+      "types": "explicit typing, no any",
+      "testing": "comprehensive edge case coverage",
+      "documentation": "JSDoc for public APIs"
+    },
+    "test": {
+      "structure": "describe blocks with clear organization",
+      "coverage": "90%+",
+      "mocking": "project-specific patterns",
+      "accessibility": "ARIA and semantic tests"
+    }
+  }
+}

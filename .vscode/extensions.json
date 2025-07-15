@@ -1,0 +1,65 @@
+{
+  "recommendations": [
+    // Core Development
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode",
+    "ms-vscode.vscode-typescript-next",
+    "ms-vscode.vscode-eslint",
+
+    // Code Quality & Security
+    "sonarqube.sonarlint-vscode",
+    "ms-vscode.vscode-json",
+
+    // Productivity
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.path-intellisense",
+    "ms-vscode.vscode-json",
+
+    // Git & Version Control
+    "eamodio.gitlens",
+    "mhutchie.git-graph",
+
+    // Testing
+    "orta.vscode-jest",
+
+    // Performance & Debugging
+    "ms-vscode.vscode-js-profile-flame",
+    "ms-vscode.vscode-js-profile-table",
+
+    // Accessibility
+    "deque-systems.vscode-axe-linter",
+
+    // Documentation
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint",
+
+    // React Development
+    "ms-vscode.vscode-react-native",
+
+    // Code Intelligence
+    "ms-vscode.vscode-intellicode",
+    "ms-vscode.vscode-intellicode-completions",
+
+    // Error Detection
+    "ms-vscode.vscode-json",
+
+    // Security
+    "ms-vscode.vscode-json",
+
+    // Performance
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.path-intellisense",
+
+    // Quality Assurance
+    "ms-vscode.vscode-json",
+    "ms-vscode.vscode-eslint",
+
+    // Development Experience
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.vscode-typescript-next",
+
+    // Code Intelligence
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.path-intellisense"
+  ]
+}

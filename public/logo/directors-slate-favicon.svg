@@ -1,0 +1,30 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGradientFavicon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FCD34D;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Clapperboard Favicon -->
+  <rect x="4" y="6" width="20" height="16" fill="#1E293B" stroke="#F59E0B" stroke-width="0.5" rx="0.5"/>
+
+  <!-- Diagonal Stripes (Classic Clapperboard Pattern) -->
+  <rect x="4" y="6" width="20" height="4" fill="#F59E0B"/>
+  <rect x="4" y="10" width="20" height="4" fill="#0F172A"/>
+  <rect x="4" y="14" width="20" height="4" fill="#F59E0B"/>
+  <rect x="4" y="18" width="20" height="4" fill="#0F172A"/>
+
+  <!-- Frame Numbers (Top Section) -->
+  <text x="6" y="9" font-family="Inter, sans-serif" font-size="2" font-weight="bold" text-anchor="middle" fill="#0F172A">01</text>
+  <text x="12" y="9" font-family="Inter, sans-serif" font-size="2" font-weight="bold" text-anchor="middle" fill="#0F172A">02</text>
+  <text x="18" y="9" font-family="Inter, sans-serif" font-size="2" font-weight="bold" text-anchor="middle" fill="#0F172A">03</text>
+
+  <!-- "O" Integrated as Scene Number -->
+  <circle cx="16" cy="15" r="2" fill="url(#goldGradientFavicon)" stroke="#F59E0B" stroke-width="0.25"/>
+  <text x="16" y="17" font-family="Inter, sans-serif" font-size="2" font-weight="bold" text-anchor="middle" fill="#0F172A">O</text>
+
+  <!-- Clapper Mechanism (Top) -->
+  <rect x="26" y="6" width="2" height="16" fill="#1E293B" stroke="#F59E0B" stroke-width="0.25" rx="0.25"/>
+  <rect x="26.5" y="6.5" width="1" height="15" fill="#F59E0B" opacity="0.8"/>
+</svg>

@@ -1,0 +1,40 @@
+{
+  "React Functional Component": {
+    "prefix": "rfc",
+    "body": [
+      "import React from 'react';",
+      "",
+      "export default function ${1:ComponentName}(${2:props}) {",
+      "  return (",
+      "    <div>$0</div>",
+      "  );",
+      "}"
+    ],
+    "description": "Create a React functional component"
+  },
+  "Next.js Page": {
+    "prefix": "npage",
+    "body": [
+      "import React from 'react';",
+      "",
+      "export default function ${1:PageName}() {",
+      "  return (",
+      "    <main>$0</main>",
+      "  );",
+      "}"
+    ],
+    "description": "Create a Next.js page component"
+  },
+  "React useState Hook": {
+    "prefix": "usestate",
+    "body": [
+      "const [${1:state}, set${2:State}] = React.useState(${3:initialValue});"
+    ],
+    "description": "React useState hook"
+  },
+  "React useEffect Hook": {
+    "prefix": "useeffect",
+    "body": ["React.useEffect(() => {", "  $0", "}, [${1:dependencies}]);"],
+    "description": "React useEffect hook"
+  }
+}

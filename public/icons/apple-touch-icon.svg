@@ -1,0 +1,32 @@
+<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F9FAFB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E5E7EB;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563EB;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="180" height="180" rx="20" fill="url(#bgGradient)"/>
+
+  <!-- Decorative elements -->
+  <circle cx="40" cy="40" r="15" fill="#3B82F6" opacity="0.1"/>
+  <circle cx="140" cy="140" r="20" fill="#3B82F6" opacity="0.08"/>
+
+  <!-- Main content area -->
+  <rect x="30" y="30" width="120" height="120" rx="12" fill="white" stroke="#E5E7EB" stroke-width="1"/>
+
+  <!-- Digital Vérité text -->
+  <text x="90" y="85" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#111827">Digital</text>
+  <text x="90" y="105" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#3B82F6">Vérité</text>
+
+  <!-- Tagline -->
+  <text x="90" y="125" font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#6B7280">Real solutions, real results</text>
+
+  <!-- Accent line -->
+  <rect x="60" y="135" width="60" height="2" rx="1" fill="url(#accentGradient)"/>
+</svg>

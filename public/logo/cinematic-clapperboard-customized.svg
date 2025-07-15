@@ -1,0 +1,6 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="128" height="128" rx="16" fill="#d4af37"/>
+    <path d="M32 40h64v8H32v-8zm0 16h64v8H32v-8zm0 16h64v8H32v-8z" fill="#0a192f"/>
+    <circle cx="64" cy="64" r="8" fill="#d4af37"/>
+    <text x="64" y="120" text-anchor="middle" fill="#0a192f" font-family="Arial" font-size="12" font-weight="bold">ORSON VISION</text>
+  </svg>

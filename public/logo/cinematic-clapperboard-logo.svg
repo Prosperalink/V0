@@ -1,0 +1,52 @@
+<svg width="300" height="120" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FCD34D;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="3" stdDeviation="4" flood-color="#0F172A" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="300" height="120" fill="#0F172A"/>
+
+  <!-- Clapperboard Body -->
+  <rect x="30" y="20" width="120" height="80" fill="#1E293B" stroke="#F59E0B" stroke-width="3" rx="4" filter="url(#shadow)"/>
+
+  <!-- Diagonal Stripes (Classic Clapperboard Pattern) -->
+  <rect x="30" y="20" width="120" height="20" fill="#F59E0B"/>
+  <rect x="30" y="40" width="120" height="20" fill="#0F172A"/>
+  <rect x="30" y="60" width="120" height="20" fill="#F59E0B"/>
+  <rect x="30" y="80" width="120" height="20" fill="#0F172A"/>
+
+  <!-- Frame Numbers (Top Section) -->
+  <text x="40" y="35" font-family="Inter, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#0F172A">01</text>
+  <text x="70" y="35" font-family="Inter, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#0F172A">02</text>
+  <text x="100" y="35" font-family="Inter, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#0F172A">03</text>
+  <text x="130" y="35" font-family="Inter, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#0F172A">04</text>
+
+  <!-- Scene Information (Bottom Section) -->
+  <text x="40" y="55" font-family="Inter, sans-serif" font-size="8" fill="#F59E0B">SCENE</text>
+  <text x="40" y="65" font-family="Inter, sans-serif" font-size="8" fill="#F59E0B">TAKE</text>
+
+  <!-- "O" Integrated as Scene Number -->
+  <circle cx="90" cy="60" r="10" fill="url(#goldGradient)" stroke="#F59E0B" stroke-width="2"/>
+  <text x="90" y="66" font-family="Inter, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#0F172A">O</text>
+
+  <!-- Clapper Mechanism (Top) -->
+  <rect x="160" y="20" width="12" height="80" fill="#1E293B" stroke="#F59E0B" stroke-width="2" rx="2"/>
+  <rect x="163" y="22" width="6" height="76" fill="#F59E0B" opacity="0.8"/>
+
+  <!-- Company Name -->
+  <text x="190" y="50" font-family="Playfair Display, serif" font-size="24" font-weight="bold" fill="#F8FAFC">Orson Vision</text>
+
+  <!-- Tagline -->
+  <text x="190" y="70" font-family="Inter, sans-serif" font-size="12" fill="#64748B">Cinematic Solutions</text>
+
+  <!-- Subtle Motion Lines -->
+  <path d="M 180 40 Q 190 40 200 40" stroke="#F59E0B" stroke-width="2" opacity="0.4" fill="none"/>
+  <path d="M 180 50 Q 190 50 200 50" stroke="#F59E0B" stroke-width="2" opacity="0.3" fill="none"/>
+  <path d="M 180 60 Q 190 60 200 60" stroke="#F59E0B" stroke-width="2" opacity="0.2" fill="none"/>
+</svg>

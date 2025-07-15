@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   id="orson-vision-logo-monochrome"
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="512" height="512" fill="#ffffff"/>
+
+  <!-- Monochrome Logo -->
+  <g id="logo-monochrome" fill="#000000">
+    <rect x="156" y="156" width="200" height="200" rx="20" fill="#1e40af"/>
+    <text x="256" y="240" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#ffffff">ORSON</text>
+    <text x="256" y="270" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#ffffff">VISION</text>
+  </g>
+</svg>

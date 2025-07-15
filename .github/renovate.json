@@ -1,0 +1,174 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":semanticCommits",
+    ":enablePreCommit",
+    ":enableVulnerabilityAlerts"
+  ],
+  "schedule": ["before 6am on monday"],
+  "timezone": "UTC",
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["patch"],
+      "groupName": "patch updates",
+      "schedule": ["before 6am on monday"],
+      "automerge": true,
+      "automergeType": "pr",
+      "platformAutomerge": true
+    },
+    {
+      "matchUpdateTypes": ["minor"],
+      "groupName": "minor updates",
+      "schedule": ["before 6am on monday"],
+      "automerge": false,
+      "reviewers": ["hasse"],
+      "assignees": ["hasse"]
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "groupName": "major updates",
+      "schedule": ["before 6am on monday"],
+      "automerge": false,
+      "reviewers": ["hasse"],
+      "assignees": ["hasse"],
+      "labels": ["breaking-change", "needs-review"]
+    },
+    {
+      "matchPackageNames": ["react", "react-dom"],
+      "groupName": "React ecosystem",
+      "automerge": false,
+      "reviewers": ["hasse"],
+      "labels": ["react", "breaking-change"]
+    },
+    {
+      "matchPackageNames": ["next"],
+      "groupName": "Next.js ecosystem",
+      "automerge": false,
+      "reviewers": ["hasse"],
+      "labels": ["nextjs", "breaking-change"]
+    },
+    {
+      "matchPackageNames": ["tailwindcss", "autoprefixer", "postcss"],
+      "groupName": "CSS toolchain",
+      "automerge": false,
+      "reviewers": ["hasse"],
+      "labels": ["css", "styling"]
+    },
+    {
+      "matchPackageNames": ["framer-motion"],
+      "groupName": "Animation libraries",
+      "automerge": false,
+      "reviewers": ["hasse"],
+      "labels": ["animation", "ui"]
+    },
+    {
+      "matchPackageNames": [
+        "typescript",
+        "@types/node",
+        "@types/react",
+        "@types/react-dom"
+      ],
+      "groupName": "TypeScript ecosystem",
+      "automerge": false,
+      "reviewers": ["hasse"],
+      "labels": ["typescript", "types"]
+    },
+    {
+      "matchPackageNames": ["eslint", "eslint-config-next", "eslint-plugin-*"],
+      "groupName": "ESLint ecosystem",
+      "automerge": false,
+      "reviewers": ["hasse"],
+      "labels": ["linting", "code-quality"]
+    },
+    {
+      "matchPackageNames": ["jest", "@testing-library/*"],
+      "groupName": "Testing ecosystem",
+      "automerge": false,
+      "reviewers": ["hasse"],
+      "labels": ["testing", "quality"]
+    },
+    {
+      "matchPackageNames": ["prettier"],
+      "groupName": "Code formatting",
+      "automerge": false,
+      "reviewers": ["hasse"],
+      "labels": ["formatting", "code-quality"]
+    },
+    {
+      "matchPackageNames": ["@headlessui/react", "lucide-react"],
+      "groupName": "UI components",
+      "automerge": false,
+      "reviewers": ["hasse"],
+      "labels": ["ui", "components"]
+    },
+    {
+      "matchPackageNames": ["react-hook-form"],
+      "groupName": "Form handling",
+      "automerge": false,
+      "reviewers": ["hasse"],
+      "labels": ["forms", "validation"]
+    },
+    {
+      "matchPackageNames": ["next-themes"],
+      "groupName": "Theme management",
+      "automerge": false,
+      "reviewers": ["hasse"],
+      "labels": ["theming", "ui"]
+    },
+    {
+      "matchPackageNames": ["husky", "lint-staged"],
+      "groupName": "Git hooks",
+      "automerge": false,
+      "reviewers": ["hasse"],
+      "labels": ["git-hooks", "quality"]
+    },
+    {
+      "matchPackageNames": ["lighthouse", "lhci"],
+      "groupName": "Performance monitoring",
+      "automerge": false,
+      "reviewers": ["hasse"],
+      "labels": ["performance", "monitoring"]
+    },
+    {
+      "matchPackageNames": ["rimraf", "cross-env", "cross-spawn"],
+      "groupName": "Build tools",
+      "automerge": false,
+      "reviewers": ["hasse"],
+      "labels": ["build-tools", "devops"]
+    },
+    {
+      "matchPackageNames": ["cors", "express"],
+      "groupName": "Server utilities",
+      "automerge": false,
+      "reviewers": ["hasse"],
+      "labels": ["server", "api"]
+    },
+    {
+      "matchPackageNames": ["@next/bundle-analyzer", "@svgr/webpack"],
+      "groupName": "Webpack plugins",
+      "automerge": false,
+      "reviewers": ["hasse"],
+      "labels": ["webpack", "bundling"]
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "schedule": ["at any time"],
+    "automerge": false,
+    "reviewers": ["hasse"],
+    "assignees": ["hasse"],
+    "labels": ["security", "vulnerability"]
+  },
+  "prHourlyLimit": 2,
+  "prConcurrentLimit": 10,
+  "rangeStrategy": "auto",
+  "bumpVersion": "patch",
+  "commitMessageAction": "Update",
+  "commitMessageTopic": "{{depName}}",
+  "commitMessageExtra": "to {{newVersion}}",
+  "commitMessageSuffix": "",
+  "commitMessagePrefix": "chore(deps):",
+  "prTitle": "{{actionPrefix}} {{depName}} to {{newVersion}}",
+  "prBodyTemplate": "## 🤖 Automated Dependency Update\n\n### 📦 **Package**: {{depName}}\n### 🔄 **Action**: {{actionPrefix}}\n### 📈 **Version**: {{newVersion}}\n### 📅 **Schedule**: {{schedule}}\n\n### 🔍 **Changes**\n{{#if hasReleaseNotes}}\n{{#each releases as |release|}}\n#### {{release.version}} - {{release.date}}\n{{#if release.releaseNotes.body}}\n{{release.releaseNotes.body}}\n{{else}}\n{{#if release.releaseNotes.name}}\n{{release.releaseNotes.name}}\n{{/if}}\n{{/if}}\n{{/each}}\n{{/if}}\n\n### 🧪 **Automated Tests**\n- [ ] Unit tests pass\n- [ ] Integration tests pass\n- [ ] TypeScript compilation\n- [ ] ESLint checks\n- [ ] Prettier formatting\n- [ ] Security audit\n- [ ] Performance benchmarks\n\n### 🔒 **Security**\n{{#if hasVulnerabilities}}\n⚠️ **Security vulnerabilities detected**\n{{#each vulnerabilities as |vuln|}}\n- {{vuln.title}} ({{vuln.severity}})\n{{/each}}\n{{else}}\n✅ **No security vulnerabilities detected**\n{{/if}}\n\n### 📊 **Compatibility**\n{{#if hasBreakingChanges}}\n⚠️ **Breaking changes detected**\n{{#each breakingChanges as |change|}}\n- {{change.description}}\n{{/each}}\n{{else}}\n✅ **No breaking changes detected**\n{{/if}}\n\n### 🎯 **Next Steps**\n1. Review the changes above\n2. Run `npm run quality-gate` locally\n3. Test the application thoroughly\n4. Merge if all checks pass\n\n---\n*This PR was automatically generated by Renovate*"
+}

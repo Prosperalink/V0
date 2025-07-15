@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Icon Placeholder</title>
+  <style>
+    body { margin: 0; background: #0f172a; display: flex; align-items: center; justify-content: center; height: 100vh; }
+    .placeholder { color: #f59e0b; font-family: Arial, sans-serif; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="placeholder">
+    <h1>Icon Placeholder</h1>
+    <p>This is a placeholder for PWA icons.</p>
+    <p>Replace with actual PNG files in production.</p>
+  </div>
+</body>
+</html>

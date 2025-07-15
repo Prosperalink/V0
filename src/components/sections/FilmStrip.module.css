@@ -1,0 +1,139 @@
+.filmstrip {
+  display: flex;
+  align-items: center;
+  background: #111;
+  padding: 32px 0;
+  overflow-x: auto;
+  border-top: 16px solid #111;
+  border-bottom: 16px solid #111;
+  position: relative;
+}
+
+.frame {
+  position: relative;
+  margin: 0 8px;
+  background: transparent;
+  width: 220px;
+  height: 160px;
+  box-shadow: 0 0 0 8px #111;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.frameImage {
+  position: absolute !important;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  z-index: 1;
+}
+
+.frameOverlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.75) 80%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  padding: 0.75rem 1rem 0.75rem 1rem;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 1rem;
+  pointer-events: none;
+  flex-wrap: wrap;
+}
+
+.frameTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  white-space: nowrap;
+}
+
+.frameDescription {
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin: 0;
+  color: #e5e7eb;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.perforationsTop,
+.perforationsBottom {
+  width: 100%;
+  height: 12px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.perforationsTop {
+  top: -20px;
+}
+
+.perforationsBottom {
+  bottom: -20px;
+}
+
+.perforationsTop::before,
+.perforationsBottom::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 12px;
+  background: repeating-linear-gradient(to right, #fff 0 8px, #111 8px 18px);
+  border-radius: 2px;
+}
+
+.divider {
+  width: 8px;
+  height: 100%;
+  background: #111;
+  position: absolute;
+  right: -8px;
+  top: 0;
+  z-index: 3;
+}
+
+@media (max-width: 600px) {
+  .frame {
+    width: 140px;
+    height: 100px;
+    box-shadow: 0 0 0 5px #111;
+  }
+  .divider {
+    height: 100%;
+    top: 0;
+  }
+  .frameOverlay {
+    padding: 0.5rem 0.5rem 0.4rem 0.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  .frameTitle {
+    font-size: 0.95rem;
+    white-space: normal;
+  }
+  .frameDescription {
+    font-size: 0.8rem;
+  }
+}
