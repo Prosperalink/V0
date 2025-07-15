@@ -13,7 +13,7 @@ export default function ManifestoCosmicGenesis() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-cream-white"
+            className="text-cream-white motion-component"
           >
             <motion.h2
               initial={{ opacity: 0, y: 30 }}

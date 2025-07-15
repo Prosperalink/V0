@@ -20,6 +20,9 @@ const config: Config = {
         'accent-gold': '#d4af37',
         'text-light': '#e6edf3',
         'text-muted': '#8b949e',
+        // Add missing text colors to fix blur issues
+        'text-primary': '#ffffff',
+        'text-secondary': '#e0e0e0',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

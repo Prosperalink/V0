@@ -18,12 +18,12 @@ export default function MatrixGalacticMap() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-16 motion-component"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-6 font-cinematic">
+          <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-6 font-cinematic crisp-text">
             The Galactic Map
           </h2>
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto">
+          <p className="text-xl text-text-secondary max-w-3xl mx-auto crisp-text">
             Explore the vastness of our Cinematic Universe. Our 'Galactic Map'
             reveals the diverse 'Planets of Partnership' we orbit and the
             'Nebulas of Expertise' that define our cosmic capabilities. Click on
@@ -38,9 +38,9 @@ export default function MatrixGalacticMap() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-16"
+          className="mb-16 motion-component"
         >
-          <h3 className="text-3xl font-bold text-golden-accent mb-8 text-center">
+          <h3 className="text-3xl font-bold text-golden-accent mb-8 text-center crisp-text">
             Planets of Partnership
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
@@ -103,7 +103,7 @@ export default function MatrixGalacticMap() {
                   />
                   <div className="absolute inset-0 rounded-full bg-golden-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                <p className="text-xs text-text-subtle text-center mt-2 group-hover:text-golden-accent transition-colors duration-300">
+                <p className="text-xs text-text-subtle text-center mt-2 group-hover:text-golden-accent transition-colors duration-300 crisp-text">
                   {planet.name}
                 </p>
               </motion.div>
@@ -117,8 +117,9 @@ export default function MatrixGalacticMap() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.4 }}
+          className="motion-component"
         >
-          <h3 className="text-3xl font-bold text-golden-accent mb-8 text-center">
+          <h3 className="text-3xl font-bold text-golden-accent mb-8 text-center crisp-text">
             Nebulas of Expertise
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
@@ -174,7 +175,7 @@ export default function MatrixGalacticMap() {
                   />
                   <div className="absolute inset-0 rounded-full bg-golden-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                <p className="text-xs text-text-subtle text-center mt-2 group-hover:text-golden-accent transition-colors duration-300">
+                <p className="text-xs text-text-subtle text-center mt-2 group-hover:text-golden-accent transition-colors duration-300 crisp-text">
                   {nebula.name}
                 </p>
               </motion.div>
@@ -188,9 +189,9 @@ export default function MatrixGalacticMap() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center mt-16"
+          className="text-center mt-16 motion-component"
         >
-          <p className="text-lg text-text-secondary mb-6">
+          <p className="text-lg text-text-secondary mb-6 crisp-text">
             Navigate through our cosmic array of digital solutions, each a
             unique constellation of expertise designed to illuminate your path
             through the digital universe.

@@ -162,6 +162,59 @@ h6 {
   perspective: 1000px;
   /* Ensure full opacity for crisp rendering */
   opacity: 1 !important;
+  /* Force hardware acceleration */
+  will-change: transform;
+  /* Prevent sub-pixel rendering issues */
+  transform-style: preserve-3d;
+  /* Ensure text is rendered on pixel boundaries */
+  text-rendering: geometricPrecision;
+}
+
+/* Specific fixes for text color classes */
+.text-text-primary {
+  color: #ffffff !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform;
+  transform-style: preserve-3d;
+  opacity: 1 !important;
+}
+
+.text-text-secondary {
+  color: #e0e0e0 !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform;
+  transform-style: preserve-3d;
+  opacity: 1 !important;
+}
+
+/* Fix for Framer Motion blur issues */
+[data-framer-motion] {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform;
+}
+
+/* Ensure motion components render crisply */
+.motion-component {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform;
+  transform-style: preserve-3d;
 }
 
 /* Premium Cinematic Effects */
